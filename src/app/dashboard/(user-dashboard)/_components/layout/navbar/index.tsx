@@ -10,7 +10,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import UnreadNotificationCard from "~/app/dashboard/(admin)/_components/unread-notification-card/UnreadNotificationCard";
+import UnreadNotificationCard from "~/app/dashboard/(admin-dashboard)/_components/unread-notification-card/UnreadNotificationCard";
 import Logo from "~/components/common/logo";
 import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 import {
