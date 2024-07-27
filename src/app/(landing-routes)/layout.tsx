@@ -1,5 +1,3 @@
-import Footer from "~/components/layouts/footer";
-import Navbar from "~/components/layouts/navbar";
 import GotoTop from "~/components/miscellaneous/goto-top";
 
 export default function LandingLayout({
@@ -9,9 +7,9 @@ export default function LandingLayout({
 }>) {
   return (
     <div className="flex min-h-screen w-full flex-col justify-between">
-      <Navbar />
+      {/* NAV-BAR */}
       <div className="flex-1">{children}</div>
-      <Footer />
+      {/* FOOTER */}
       <GotoTop />
     </div>
   );

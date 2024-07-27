@@ -1,8 +1,6 @@
 import { Body, Container, Font, Head, Html } from "@react-email/components";
 
 import TailwindWrapper from "../../_tailwindWrapper";
-import EmailFooter from "../template-footer/EmailFooter";
-import EmailHeader from "../template-header/EmailHeader";
 
 export default function Layout({
   children,
