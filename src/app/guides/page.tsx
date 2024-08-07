@@ -225,6 +225,7 @@ const StyleGuide: FC = () => {
             <span className="block font-mono text-sm text-gray-100">{"}"}</span>
           </div>
         </div>
+
         <div className="flex flex-col gap-2">
           <span>Accepted Custom Button Props</span>
           <div className="rounded-lg bg-zinc-950 p-4">
@@ -258,6 +259,7 @@ const StyleGuide: FC = () => {
             <span className="block font-mono text-sm text-gray-100">{"}"}</span>
           </div>
         </div>
+
         <div className="flex flex-col gap-2">
           <span>Example</span>
           <div className="rounded-lg bg-zinc-950 p-4">

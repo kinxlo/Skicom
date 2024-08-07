@@ -1,0 +1,175 @@
+"use client";
+
+import { Squash as Hamburger } from "hamburger-react";
+import Image from "next/image";
+import Link from "next/link";
+import { FC, useState } from "react";
+
+import CustomButton from "~/components/common/common-button/common-button";
+import Logo from "../../../../public/images/logo/skicom.png";
+
+import "./navbar.css";
+
+const Navbar: FC = () => {
+  const [active, setActive] = useState<string>("/");
+  const [isOpen, setOpen] = useState(false);
+
+  const handleClick = (item: string) => {
+    setActive(item);
+  };
+  return (
+    <main>
+      <section className="fixed left-0 right-0 z-10 mx-auto flex h-[65px] items-center justify-between bg-white px-5 shadow-md 2xl:container xl:mx-auto xl:mt-5 xl:w-11/12 xl:rounded-full">
+        <section>
+          <Link href={"/"}>
+            <Image src={Logo} alt={"Skicom-logo"} height={50} />
+          </Link>
+        </section>
+
+        <section className="navbar hidden xl:block">
+          <ul
+            className={`nav-list flex items-center gap-7 text-sm font-semibold`}
+          >
+            <li>
+              <Link
+                href={"/"}
+                className={`nav-item ${active === "/" ? "active" : ""} ${active === "/" ? "text-[#007CC3]" : ""}`}
+                onClick={() => handleClick("/")}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/"}
+                className={`nav-item ${active === "about" ? "active" : ""} ${active === "about" ? "text-[#007CC3]" : ""}`}
+                onClick={() => handleClick("about")}
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/"}
+                className={`nav-item ${active === "services" ? "active" : ""} ${active === "services" ? "text-[#007CC3]" : ""}`}
+                onClick={() => handleClick("services")}
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/"}
+                className={`nav-item ${active === "stores" ? "active" : ""} ${active === "stores" ? "text-[#007CC3]" : ""}`}
+                onClick={() => handleClick("stores")}
+              >
+                Stores
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/"}
+                className={`nav-item ${active === "contact" ? "active" : ""} ${active === "contact" ? "text-[#007CC3]" : ""}`}
+                onClick={() => handleClick("contact")}
+              >
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </section>
+
+        <section className="hidden items-center gap-5 xl:flex">
+          <div>SearchBar</div>
+
+          <Link href={"/register"} className="text-sm font-semibold">
+            Sign Up
+          </Link>
+
+          <CustomButton variant="primary" className="rounded-full" size="lg">
+            <Link href={"/login"}>Login</Link>
+          </CustomButton>
+        </section>
+
+        <section className="xl:hidden">
+          <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
+        </section>
+      </section>
+
+      {isOpen && (
+        <section className="navbar fixed z-10 mt-16 w-full shadow-md xl:hidden">
+          <ul
+            className={`nav-list flex flex-col items-center gap-7 text-sm font-semibold`}
+          >
+            <li>
+              <Link
+                href={"/"}
+                className={`nav-item ${active === "/" ? "active" : ""} ${active === "/" ? "text-[#007CC3]" : ""}`}
+                onClick={() => handleClick("/")}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/"}
+                className={`nav-item ${active === "about" ? "active" : ""} ${active === "about" ? "text-[#007CC3]" : ""}`}
+                onClick={() => handleClick("about")}
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/"}
+                className={`nav-item ${active === "services" ? "active" : ""} ${active === "services" ? "text-[#007CC3]" : ""}`}
+                onClick={() => handleClick("services")}
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/"}
+                className={`nav-item ${active === "stores" ? "active" : ""} ${active === "stores" ? "text-[#007CC3]" : ""}`}
+                onClick={() => handleClick("stores")}
+              >
+                Stores
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/"}
+                className={`nav-item ${active === "contact" ? "active" : ""} ${active === "contact" ? "text-[#007CC3]" : ""}`}
+                onClick={() => handleClick("contact")}
+              >
+                Contact Us
+              </Link>
+            </li>
+
+            <li className="mr-4">
+              <div>SearchBar</div>
+            </li>
+
+            <li className="mr-4">
+              <Link href={"/register"} className="text-sm font-semibold">
+                Sign Up
+              </Link>
+            </li>
+
+            <li className="mr-4">
+              <CustomButton
+                variant="primary"
+                className="rounded-full"
+                size="lg"
+              >
+                <Link href={"/login"}>Login</Link>
+              </CustomButton>
+            </li>
+          </ul>
+        </section>
+      )}
+    </main>
+  );
+};
+
+export default Navbar;
