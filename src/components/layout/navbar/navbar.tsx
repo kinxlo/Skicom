@@ -3,7 +3,7 @@
 import { Squash as Hamburger } from "hamburger-react";
 import Image from "next/image";
 import Link from "next/link";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
 import CustomButton from "~/components/common/common-button/common-button";
 import Logo from "../../../../public/images/logo/skicom.png";
@@ -13,13 +13,30 @@ import "./navbar.css";
 const Navbar: FC = () => {
   const [active, setActive] = useState<string>("/");
   const [isOpen, setOpen] = useState(false);
+  const [isBlurred, setIsBlurred] = useState(false);
 
   const handleClick = (item: string) => {
     setActive(item);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsBlurred(true);
+      } else {
+        setIsBlurred(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <main>
-      <section className="fixed left-0 right-0 z-10 mx-auto flex h-[65px] items-center justify-between bg-white px-5 shadow-md 2xl:container xl:mx-auto xl:mt-5 xl:w-11/12 xl:rounded-full">
+    <main className="">
+      <section
+        className={`navbar-container fixed left-0 right-0 z-10 mx-auto flex h-[65px] items-center justify-between bg-white px-5 shadow-md 2xl:container xl:mx-auto ${isBlurred ? "xl:mt-0" : "duration-300 xl:mt-5"} xl:w-11/12 xl:rounded-full`}
+      >
         <section>
           <Link href={"/"}>
             <Image src={Logo} alt={"Skicom-logo"} height={50} />
