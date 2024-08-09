@@ -300,6 +300,112 @@ const StyleGuide: FC = () => {
             <span className="block font-mono text-sm text-gray-100">);</span>
           </div>
         </div>
+
+        <div className="flex flex-col gap-2">
+          <span>Example</span>
+          <div className="rounded-lg bg-zinc-950 p-4">
+            <span className="block font-mono text-sm text-gray-100">
+              return (
+            </span>
+            <span className="ml-4 block font-mono text-sm text-gray-100">
+              <span className="text-green-400">{"<"}</span>
+              <span className="text-blue-400">DataCard</span>
+              <br />
+              <span className="ml-4">
+                price=
+                <span className="text-yellow-400">{"{500}"}</span> <br />
+              </span>
+              <span className="ml-4">
+                initialPrice=
+                <span className="text-yellow-400">{"{1500}"}</span> <br />
+              </span>
+              <span className="ml-4">
+                plan=
+                {
+                  <span className="text-yellow-400">{"{2-Days Plan}"}</span>
+                }{" "}
+                <br />
+              </span>
+              <span className="ml-4">
+                packages=
+                {<span className="text-yellow-400">{"{packages}"}</span>} <br />
+              </span>
+              <span className="text-green-400">{"/>"}</span> <br />
+            </span>
+            <span className="block font-mono text-sm text-gray-100">);</span>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <span>Example</span>
+          <div className="rounded-lg bg-zinc-950 p-4">
+            <span className="block font-mono text-sm text-gray-100">
+              return (
+            </span>
+            <span className="ml-4 block font-mono text-sm text-gray-100">
+              <span className="text-green-400">{"<"}</span>
+              <span className="text-blue-400">JobCard</span>
+              <br />
+              <span className="ml-4">
+                position=
+                <span className="text-yellow-400">
+                  {"{position name}"}
+                </span>{" "}
+                <br />
+              </span>
+              <span className="ml-4">
+                Description=
+                <span className="text-yellow-400">
+                  {"{Job description}"}
+                </span>{" "}
+                <br />
+              </span>
+              <span className="ml-4">
+                jobDescription=
+                {
+                  <span className="text-yellow-400">{"{jobDescriptions}"}</span>
+                }{" "}
+                <br />
+              </span>
+              <span className="text-green-400">{"/>"}</span> <br />
+            </span>
+            <span className="block font-mono text-sm text-gray-100">);</span>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <span>Example</span>
+          <div className="rounded-lg bg-zinc-950 p-4">
+            <span className="block font-mono text-sm text-gray-100">
+              return (
+            </span>
+            <span className="ml-4 block font-mono text-sm text-gray-100">
+              <span className="text-green-400">{"<"}</span>
+              <span className="text-blue-400">ArticlesCard</span>
+              <br />
+              <span className="ml-4">
+                articleImage=
+                <span className="text-yellow-400">{"{articleImage}"}</span>{" "}
+                <br />
+              </span>
+              <span className="ml-4">
+                heading=
+                <span className="text-yellow-400">{"{heading}"}</span> <br />
+              </span>
+              <span className="ml-4">
+                dateSent
+                {<span className="text-yellow-400">{"{dateSent}"}</span>} <br />
+              </span>
+              <span className="ml-4">
+                subHeading
+                {<span className="text-yellow-400">{"{subHeading}"}</span>}{" "}
+                <br />
+              </span>
+              <span className="text-green-400">{"/>"}</span> <br />
+            </span>
+            <span className="block font-mono text-sm text-gray-100">);</span>
+          </div>
+        </div>
       </div>
     </main>
   );
