@@ -1,5 +1,5 @@
 interface IStarRatingProperties {
-  rating: number;
+  rating: number | undefined;
 }
 interface IStarProperties {
   filled: boolean;
@@ -13,7 +13,7 @@ const Star = ({ filled }: IStarProperties) => {
   );
 };
 
-const StarRating = ({ rating }: IStarRatingProperties) => {
+const StarRating = ({ rating = 0 }: IStarRatingProperties) => {
   const totalStars = 5;
   const stars = [];
 
