@@ -8,7 +8,7 @@ import instagram from "../../../../public/images/footer/instagram.png";
 import Playstore from "../../../../public/images/footer/Playstore.png";
 import twitter from "../../../../public/images/footer/twitter.png";
 import Logo from "../../../../public/images/logo/skicom.png";
-import NewsLetter from "../news-letter/news-letter";
+import NewsLetter from "../../common/news-letter/news-letter";
 
 const Footer: FC = () => {
   const getYear = new Date().getFullYear();

@@ -3,7 +3,12 @@
 import { Orbit, Plus } from "lucide-react";
 import { FC } from "react";
 
+import Accordions from "~/components/common/accordion/accordion-component";
 import CustomButton from "~/components/common/common-button/common-button";
+import DataCard from "~/components/common/data-card/data-card";
+import Testimonial from "~/components/common/testimonial/testimonial";
+import Footer from "~/components/layout/footer/footer";
+import Navbar from "~/components/layout/navbar/navbar";
 
 const StyleGuide: FC = () => {
   return (
@@ -301,6 +306,16 @@ const StyleGuide: FC = () => {
           </div>
         </div>
       </div>
+      <section>
+        <h1 className="text-4xl">Components</h1>
+        <div>
+          <Accordions />
+          <Testimonial />
+          <DataCard />
+          <Navbar />
+          <Footer />
+        </div>
+      </section>
     </main>
   );
 };

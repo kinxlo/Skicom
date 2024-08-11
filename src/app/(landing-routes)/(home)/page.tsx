@@ -1,6 +1,6 @@
-import Accordions from "~/components/layout/accordion/accordion-component";
-import DataCard from "~/components/layout/data-card/data-card";
-import Testimonial from "~/components/layout/testimonial/testimonial";
+import Accordions from "~/components/common/accordion/accordion-component";
+import DataCard from "~/components/common/data-card/data-card";
+import Testimonial from "~/components/common/testimonial/testimonial";
 
 function page() {
   return (

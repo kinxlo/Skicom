@@ -1,4 +1,11 @@
-const Star = ({ filled }) => {
+interface IStarRatingProperties {
+  rating: number;
+}
+interface IStarProperties {
+  filled: boolean;
+}
+
+const Star = ({ filled }: IStarProperties) => {
   return filled ? (
     <span className="text-neutral-dark-1 xl:text-2xl">★</span>
   ) : (
@@ -6,7 +13,7 @@ const Star = ({ filled }) => {
   );
 };
 
-const StarRating = ({ rating }) => {
+const StarRating = ({ rating }: IStarRatingProperties) => {
   const totalStars = 5;
   const stars = [];
 

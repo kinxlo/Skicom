@@ -3,8 +3,7 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 
-import Footer from "~/components/layout/footer/footer";
-import Navbar from "~/components/layout/navbar/navbar";
+import GotoTop from "~/components/miscellaneous/goto-top";
 import Providers from "~/components/providers";
 import { Toaster } from "~/components/ui/toaster";
 
@@ -23,12 +22,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="">
-          {/* <Navbar /> */}
+          <GotoTop />
           <Providers />
           {children}
           <Toaster />
         </div>
-        {/* <Footer /> */}
       </body>
     </html>
   );
