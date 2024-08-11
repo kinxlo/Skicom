@@ -417,7 +417,7 @@ const StyleGuide: FC = () => {
         <div>
           <Accordions />
           <Testimonial />
-          <DataCard />
+          <DataCard price={0} initialPrice={0} plan={""} packages={[]} />
           <Navbar />
           <Footer />
         </div>
