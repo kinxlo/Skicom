@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +10,33 @@ import CustomButton from "~/components/common/common-button/common-button";
 import Logo from "../../../../public/images/logo/skicom.png";
 
 import "./navbar.css";
+
+const menuVariant = {
+  initial: {
+    y: -300,
+    opacity: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+  exit: {
+    y: -300,
+    opacity: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
 
 const Navbar: FC = () => {
   const [active, setActive] = useState<string>("/");
@@ -112,79 +140,88 @@ const Navbar: FC = () => {
         </section>
       </section>
 
-      {isOpen && (
-        <section className="navbar fixed z-10 mt-16 w-full shadow-md xl:hidden">
-          <ul
-            className={`nav-list flex flex-col items-center gap-7 text-sm font-semibold`}
+      <AnimatePresence>
+        {isOpen && (
+          // mobile navbar
+          <motion.section
+            className="navbar fixed z-10 mt-16 w-full shadow-md xl:hidden"
+            variants={menuVariant}
+            initial="initial"
+            animate="animate"
+            exit="exit"
           >
-            <li>
-              <Link
-                href={"/"}
-                className={`nav-item ${active === "/" ? "active" : ""} ${active === "/" ? "text-[#007CC3]" : ""}`}
-                onClick={() => handleClick("/")}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/"}
-                className={`nav-item ${active === "about" ? "active" : ""} ${active === "about" ? "text-[#007CC3]" : ""}`}
-                onClick={() => handleClick("about")}
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/"}
-                className={`nav-item ${active === "services" ? "active" : ""} ${active === "services" ? "text-[#007CC3]" : ""}`}
-                onClick={() => handleClick("services")}
-              >
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/"}
-                className={`nav-item ${active === "stores" ? "active" : ""} ${active === "stores" ? "text-[#007CC3]" : ""}`}
-                onClick={() => handleClick("stores")}
-              >
-                Stores
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/"}
-                className={`nav-item ${active === "contact" ? "active" : ""} ${active === "contact" ? "text-[#007CC3]" : ""}`}
-                onClick={() => handleClick("contact")}
-              >
-                Contact Us
-              </Link>
-            </li>
+            <ul
+              className={`nav-list flex flex-col items-center gap-7 text-sm font-semibold`}
+            >
+              <li>
+                <Link
+                  href={"/"}
+                  className={`nav-item ${active === "/" ? "active" : ""} ${active === "/" ? "text-[#007CC3]" : ""}`}
+                  onClick={() => handleClick("/")}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={"/"}
+                  className={`nav-item ${active === "about" ? "active" : ""} ${active === "about" ? "text-[#007CC3]" : ""}`}
+                  onClick={() => handleClick("about")}
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={"/"}
+                  className={`nav-item ${active === "services" ? "active" : ""} ${active === "services" ? "text-[#007CC3]" : ""}`}
+                  onClick={() => handleClick("services")}
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={"/"}
+                  className={`nav-item ${active === "stores" ? "active" : ""} ${active === "stores" ? "text-[#007CC3]" : ""}`}
+                  onClick={() => handleClick("stores")}
+                >
+                  Stores
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={"/"}
+                  className={`nav-item ${active === "contact" ? "active" : ""} ${active === "contact" ? "text-[#007CC3]" : ""}`}
+                  onClick={() => handleClick("contact")}
+                >
+                  Contact Us
+                </Link>
+              </li>
 
-            <li className="mr-4">
-              <div>SearchBar</div>
-            </li>
+              <li className="mr-4">
+                <div>SearchBar</div>
+              </li>
 
-            <li className="mr-4">
-              <Link href={"/register"} className="text-sm font-semibold">
-                Sign Up
-              </Link>
-            </li>
+              <li className="mr-4">
+                <Link href={"/register"} className="text-sm font-semibold">
+                  Sign Up
+                </Link>
+              </li>
 
-            <li className="mr-4">
-              <CustomButton
-                variant="primary"
-                className="rounded-full"
-                size="lg"
-              >
-                <Link href={"/login"}>Login</Link>
-              </CustomButton>
-            </li>
-          </ul>
-        </section>
-      )}
+              <li className="mr-4">
+                <CustomButton
+                  variant="primary"
+                  className="rounded-full"
+                  size="lg"
+                >
+                  <Link href={"/login"}>Login</Link>
+                </CustomButton>
+              </li>
+            </ul>
+          </motion.section>
+        )}
+      </AnimatePresence>
     </main>
   );
 };
