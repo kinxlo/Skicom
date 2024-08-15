@@ -1,0 +1,39 @@
+.hero-img {
+  background-image: url(../../../public/images/home/hero.png);
+  background-size: contain;
+  height: 500px;
+  width: 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.help {
+  background-image: url(../../../public/images/home/help.png);
+  height: 50px;
+  width: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.rate {
+  background-image: url(../../../public/images/home/rate.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.support {
+  background-image: url(../../../public/images/home/support.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.payment {
+  background-image: url(../../../public/images/home/payment.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

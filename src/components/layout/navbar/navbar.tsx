@@ -49,7 +49,7 @@ const Navbar: FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 5) {
         setIsBlurred(true);
       } else {
         setIsBlurred(false);
