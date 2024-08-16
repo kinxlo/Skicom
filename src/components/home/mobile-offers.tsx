@@ -19,7 +19,7 @@ const MobileOffers = ({ offers }: MobileOffersProperties) => {
   return (
     <main>
       <Carousel className="w-full max-w-sm">
-        <CarouselContent className="">
+        <CarouselContent>
           {offers.map((item, index) => (
             <CarouselItem key={index} className="basis-11/12">
               <div className="">

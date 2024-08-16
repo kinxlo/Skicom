@@ -38,7 +38,7 @@ const Hero = () => {
       </section>
 
       <section className="relative lg:hidden">
-        <div className="pt-10 pb-20">
+        <div className="pb-20 pt-10">
           <div className="relative w-full">
             <h3 className="max-w-[330px] text-3xl font-bold text-neutral-dark-1">
               Get Connected With Us & Stay Connected
