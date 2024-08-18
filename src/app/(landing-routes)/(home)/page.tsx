@@ -168,11 +168,6 @@ function page() {
         <Testimonial />
       </div>
 
-      {/* <JobCard
-        jobDescription={jobDescription}
-        position="Customer Support"
-        contract="Lagos, Full Time"
-      /> */}
       {/* <ArticlesCard
         articleImage={article}
         heading={"Getting Started on SKICOM"}

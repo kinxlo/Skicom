@@ -101,7 +101,7 @@ const Navbar: FC = () => {
             </li>
             <li>
               <Link
-                href={"/"}
+                href={"/services"}
                 className={`nav-item ${active === "services" ? "active" : ""} ${active === "services" ? "text-[#007CC3]" : ""}`}
                 onClick={() => handleClick("services")}
               >
@@ -181,7 +181,7 @@ const Navbar: FC = () => {
               </li>
               <li onClick={handleNavbarClose}>
                 <Link
-                  href={"/"}
+                  href={"/services"}
                   className={`nav-item ${active === "services" ? "active" : ""} ${active === "services" ? "text-[#007CC3]" : ""}`}
                   onClick={() => handleClick("services")}
                 >

@@ -7,7 +7,7 @@ import check from "../../../../public/images/data-card/Check.png";
 
 interface cardProperties {
   price: number;
-  initialPrice: number;
+  initialPrice: number | undefined;
   plan: string;
   packages: {
     id: number;
@@ -21,7 +21,8 @@ const DataCard = ({ price, initialPrice, plan, packages }: cardProperties) => {
       <div className="mt-3 flex items-center gap-4">
         <p className="text-4xl font-semibold text-neutral-dark-1">#{price}</p>
         <p className="text-xl font-medium text-red-600 line-through">
-          #{initialPrice}
+          {initialPrice && "#"}
+          {initialPrice}
         </p>
       </div>
 
