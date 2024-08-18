@@ -1,7 +1,11 @@
+import offerDown from "../../../public/images/home/offer-ring-down.png";
+import offerUp from "../../../public/images/home/offer-ring-up.png";
 import CustomButton from "../common/common-button/common-button";
 import DataCard from "../common/data-card/data-card";
 
 import "./home.css";
+
+import Image from "next/image";
 
 import MobileOffers from "./mobile-offers";
 
@@ -94,36 +98,53 @@ const offers = [
 
 const Offers = () => {
   return (
-    <main className="w-full bg-primary p-4 lg:p-10">
-      <div className="items-center text-center lg:mr-10 lg:flex lg:justify-between">
-        <div>
-          <p className="mb-1 text-sm text-gray-300">Best Of SKICOM</p>
-          <h3 className="mb-3 text-white">Promotions And Offers</h3>
+    <section className="relative bg-primary py-7 lg:py-10">
+      <main className="mx-auto w-11/12 2xl:container">
+        <div className="items-center lg:mr-10 lg:flex lg:justify-between">
+          <div>
+            <p className="mb-1 text-sm text-gray-300">Best Of SKICOM</p>
+            <h3 className="mb-3 text-xl text-white">Promotions And Offers</h3>
+          </div>
+
+          <div>
+            <CustomButton className="rounded-full text-xs text-primary">
+              View All Plans
+            </CustomButton>
+          </div>
         </div>
 
-        <div>
-          <CustomButton className="rounded-full text-xs text-primary">
-            View All Plans
-          </CustomButton>
+        <div className="my-7 hidden items-center justify-between xl:flex">
+          {offers.map((item) => (
+            <DataCard
+              key={item.id}
+              price={item.price}
+              initialPrice={item.initialPrice}
+              plan={item.plan}
+              packages={item.packages}
+            />
+          ))}
         </div>
-      </div>
 
-      <div className="my-7 hidden items-center justify-between xl:flex">
-        {offers.map((item) => (
-          <DataCard
-            key={item.id}
-            price={item.price}
-            initialPrice={item.initialPrice}
-            plan={item.plan}
-            packages={item.packages}
+        <div className="mt-4 lg:hidden">
+          <MobileOffers offers={offers} />
+        </div>
+      </main>
+
+      <section>
+        <div>
+          <Image
+            src={offerDown}
+            alt="offer-ring-down"
+            className="absolute bottom-0 left-0 w-[300px]"
           />
-        ))}
-      </div>
-
-      <div className="mt-4 lg:hidden">
-        <MobileOffers offers={offers} />
-      </div>
-    </main>
+          <Image
+            src={offerUp}
+            alt="offer-ring-up"
+            className="absolute right-0 top-0 w-[300px]"
+          />
+        </div>
+      </section>
+    </section>
   );
 };
 

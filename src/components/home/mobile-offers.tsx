@@ -18,10 +18,10 @@ interface MobileOffersProperties {
 const MobileOffers = ({ offers }: MobileOffersProperties) => {
   return (
     <main>
-      <Carousel className="w-full max-w-sm">
+      <Carousel className="z-10 w-full">
         <CarouselContent>
           {offers.map((item, index) => (
-            <CarouselItem key={index} className="basis-11/12">
+            <CarouselItem key={index} className="basis-1/1">
               <div className="">
                 <DataCard
                   price={item.price}

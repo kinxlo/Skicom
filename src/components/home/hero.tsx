@@ -9,7 +9,7 @@ import wifi from "../../../public/images/home/wifi.png";
 
 const Hero = () => {
   return (
-    <main>
+    <main className="mx-auto w-11/12 2xl:container">
       <section className="hero-img relative -mt-24 hidden md:block">
         <div className="pt-40">
           <div className="relative w-[450px]">

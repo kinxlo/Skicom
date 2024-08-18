@@ -9,7 +9,7 @@ export default function LandingLayout({
   return (
     <div className="flex min-h-screen w-full flex-col justify-between">
       <Navbar />
-      <div className="mx-auto mt-[95px] w-11/12 2xl:container">{children}</div>
+      <div className="mt-[95px]">{children}</div>
       <Footer />
     </div>
   );
