@@ -14,7 +14,7 @@ import wifiBold from "../../../../public/images/home/wifi-bold.png";
 const Page = () => {
   return (
     <main>
-      <div className="absolute top-0 h-[350px] w-full bg-primary">
+      <div className="absolute top-0 h-[300px] w-full bg-primary lg:h-[350px]">
         <h3 className="pt-40 text-center text-5xl font-semibold text-white">
           About Us
         </h3>

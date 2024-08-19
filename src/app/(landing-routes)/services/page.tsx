@@ -12,7 +12,7 @@ import speed from "../../../../public/images/services/speed.png";
 const Page = () => {
   return (
     <main>
-      <div className="absolute top-0 h-[350px] w-full bg-primary">
+      <div className="absolute top-0 h-[300px] w-full bg-primary lg:h-[350px]">
         <h3 className="pt-40 text-center text-5xl font-semibold text-white">
           Services
         </h3>
@@ -21,7 +21,7 @@ const Page = () => {
       </div>
 
       <section className="relative bg-[#FFFFFF]">
-        <div className="mx-auto mt-[255px] w-11/12 py-10 2xl:container">
+        <div className="mx-auto mt-[195px] w-11/12 py-10 2xl:container">
           <div className="space-y-2 text-center">
             <h3 className="text--neutral-dark-2 text-xl font-semibold">
               Our Services

@@ -119,7 +119,7 @@ const Navbar: FC = () => {
             </li>
             <li>
               <Link
-                href={"/"}
+                href={"/contact"}
                 className={`nav-item ${active === "contact" ? "active" : ""} ${active === "contact" ? "text-[#007CC3]" : ""}`}
                 onClick={() => handleClick("contact")}
               >
@@ -199,7 +199,7 @@ const Navbar: FC = () => {
               </li>
               <li onClick={handleNavbarClose}>
                 <Link
-                  href={"/"}
+                  href={"/contact"}
                   className={`nav-item ${active === "contact" ? "active" : ""} ${active === "contact" ? "text-[#007CC3]" : ""}`}
                   onClick={() => handleClick("contact")}
                 >

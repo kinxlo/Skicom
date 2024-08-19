@@ -64,13 +64,13 @@ const Testimonial = () => {
   const selectedTestimonial = testimonialImages[selectedTestimonialIndex];
 
   return (
-    <main className="mx-auto w-11/12 text-center 2xl:container">
+    <main className="mx-auto w-11/12 2xl:container">
       <section>
         <section className="my-9 xl:my-14">
           <section className="items-center gap-3 md:flex">
             <div className="flex-1">
               <h1 className="text-lg font-semibold">Our Testimonials</h1>
-              <p className="mt-2 text-3xl text-primary">
+              <p className="mt-2 text-2xl font-medium text-primary lg:text-3xl">
                 What People Say About Us
               </p>
             </div>
