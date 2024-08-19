@@ -103,7 +103,7 @@ const JobOffers = () => {
           </div>
         </div>
 
-        <div className="my-7 hidden items-center justify-between xl:flex">
+        <div className="my-7 hidden items-center justify-between gap-5 lg:flex">
           {offers.map((item) => (
             <JobCard
               key={item.id}

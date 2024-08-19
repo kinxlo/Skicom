@@ -20,10 +20,10 @@ function page() {
           {/* Welcome To SKICOM */}
           <h2 className="text-sm font-semibold">Welcome to SKICOM</h2>
 
-          <h4 className="text-xl font-semibold text-neutral-dark-1">
+          <h4 className="mx-auto mt-2 max-w-[250px] text-xl font-semibold text-neutral-dark-1 lg:max-w-full">
             A Single Sign-in To Your Digital World
           </h4>
-          <p className="mx-auto mt-2 max-w-lg text-sm font-medium">
+          <p className="mx-auto mt-2 max-w-[350px] text-sm font-medium">
             Lorem ipsum dolor sit amet consectetur. Lorem libero arcu ut
             venenatis feugiat lacus. Elit tellus morbi quis a aliquam mi pretium
             nam donec. Duis posuere venenatis et amet sed.{" "}
@@ -113,7 +113,7 @@ function page() {
             </div>
           </div>
 
-          <div className="hidden xl:block">
+          <div className="hidden lg:block">
             <Image
               src={centerOffer}
               alt="center-offer-img"

@@ -714,7 +714,7 @@ const DataAirtime = () => {
           </CustomButton>
         </div>
 
-        <div className="mt-10 grid grid-cols-4 items-center gap-7">
+        <div className="mt-10 grid items-center gap-7 lg:grid-cols-3 xl:grid-cols-4">
           {choosenType.map((item, index) => (
             <DataCard
               key={index}
@@ -735,7 +735,7 @@ const DataAirtime = () => {
         <Image
           src={offerRight}
           alt="offer-ring-down"
-          className="absolute bottom-0 right-0 w-[300px]"
+          className="absolute bottom-0 right-0 z-0 w-[300px]"
         />
         <Image
           src={offerMiddle}

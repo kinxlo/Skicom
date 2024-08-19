@@ -43,7 +43,7 @@ const Page = () => {
                 className="mx-auto mb-4 h-36 w-40"
               />
               <h4 className="mb-1 font-semibold text-neutral-dark-1">speed</h4>
-              <p className="max-w-[250px] text-sm">
+              <p className="mx-auto max-w-[250px] text-sm">
                 Our network offers high-speed internet with various options to
                 meet your needs.
               </p>
@@ -58,7 +58,7 @@ const Page = () => {
               <h4 className="mb-1 font-semibold text-neutral-dark-1">
                 Coverage
               </h4>
-              <p className="max-w-[250px] text-sm">
+              <p className="mx-auto max-w-[250px] text-sm">
                 We provide extensive coverage across the country, ensuring you
                 stay connected wherever you go.
               </p>
@@ -73,7 +73,7 @@ const Page = () => {
               <h4 className="mb-1 font-semibold text-neutral-dark-1">
                 Reliability
               </h4>
-              <p className="max-w-[250px] text-sm">
+              <p className="mx-auto max-w-[250px] text-sm">
                 Our network is built with the latest technology to offer a
                 stable and reliable connection at all times.
               </p>

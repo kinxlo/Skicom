@@ -113,7 +113,7 @@ const Offers = () => {
           </div>
         </div>
 
-        <div className="my-7 hidden items-center justify-between xl:flex">
+        <div className="my-7 hidden items-center justify-between lg:flex">
           {offers.map((item) => (
             <DataCard
               key={item.id}

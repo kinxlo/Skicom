@@ -17,7 +17,7 @@ interface cardProperties {
 
 const DataCard = ({ price, initialPrice, plan, packages }: cardProperties) => {
   return (
-    <main className="card relative h-[320px] w-[290px] bg-white p-5">
+    <main className="card relative z-10 h-[320px] w-[290px] bg-white p-5">
       <div className="mt-3 flex items-center gap-4">
         <p className="text-4xl font-semibold text-neutral-dark-1">#{price}</p>
         <p className="text-xl font-medium text-red-600 line-through">
