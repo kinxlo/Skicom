@@ -45,7 +45,7 @@ const CustomerCare = () => {
             <h3 className="text-2xl font-semibold text-neutral-dark-1 lg:text-3xl">
               Frequently Asked Questions
             </h3>
-            <p className="mt-3 text-sm lg:mt-0">
+            <p className="mt-3 text-sm lg:mt-2">
               Ask everything you need to know about our products and services.
             </p>
           </div>
