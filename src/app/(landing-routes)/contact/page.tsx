@@ -21,17 +21,17 @@ const Page = () => {
   return (
     <main>
       <div className="absolute top-0 h-[300px] w-full bg-[#007CC3CC] lg:h-[350px]">
-        <h3 className="pt-40 text-center text-5xl font-semibold text-white">
+        <h3 className="pt-40 text-center text-3xl font-semibold text-white lg:text-5xl">
           Contact Us
         </h3>
 
         <BreadCrumb />
       </div>
 
-      <section className="mt-[255px] pt-14">
+      <section className="mt-[200px] pt-14 lg:mt-[255px]">
         <section className="mx-auto w-11/12 2xl:container">
           <div className="flex flex-col justify-center">
-            <p className="text-center text-3xl font-bold text-neutral-dark-1">
+            <p className="text-center text-2xl font-bold text-neutral-dark-1 lg:text-3xl">
               Feel Free To Reach Out
             </p>
 

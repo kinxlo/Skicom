@@ -11,7 +11,7 @@ const Accordions = () => {
       <Accordion
         type="single"
         collapsible
-        className="my-5 w-full rounded-lg bg-[#FFFFFF] px-5"
+        className="my-5 w-full rounded-lg bg-[#F8FAFC] px-5"
       >
         <AccordionItem value="item-1">
           <AccordionTrigger>

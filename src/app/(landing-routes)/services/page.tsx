@@ -13,7 +13,7 @@ const Page = () => {
   return (
     <main>
       <div className="absolute top-0 h-[300px] w-full bg-primary lg:h-[350px]">
-        <h3 className="pt-40 text-center text-5xl font-semibold text-white">
+        <h3 className="pt-40 text-center text-3xl font-semibold text-white lg:text-5xl">
           Services
         </h3>
 
@@ -23,7 +23,7 @@ const Page = () => {
       <section className="relative bg-[#FFFFFF]">
         <div className="mx-auto mt-[195px] w-11/12 py-10 2xl:container">
           <div className="space-y-2 text-center">
-            <h3 className="text--neutral-dark-2 text-xl font-semibold">
+            <h3 className="text-xl font-semibold text-neutral-dark-2">
               Our Services
             </h3>
             <p className="text-3xl font-bold text-neutral-dark-1">

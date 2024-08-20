@@ -15,7 +15,7 @@ const Page = () => {
   return (
     <main>
       <div className="absolute top-0 h-[300px] w-full bg-primary lg:h-[350px]">
-        <h3 className="pt-40 text-center text-5xl font-semibold text-white">
+        <h3 className="pt-40 text-center text-3xl font-semibold text-white lg:text-5xl">
           About Us
         </h3>
 
@@ -23,7 +23,7 @@ const Page = () => {
       </div>
 
       <section className="relative">
-        <div className="mx-auto mt-[255px] w-11/12 items-center justify-between py-14 2xl:container lg:flex">
+        <div className="mx-auto mt-[200px] w-11/12 items-center justify-between py-14 2xl:container lg:mt-[255px] lg:flex">
           <Image
             src={aboutHero}
             alt="about-hero-img"
