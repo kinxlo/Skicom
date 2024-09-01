@@ -1,7 +1,4 @@
 import Hero from "~/components/home/hero";
-import centerOffer from "../../../../public/images/home/center-offer.png";
-import offer from "../../../../public/images/home/offer.png";
-import wifiBold from "../../../../public/images/home/wifi-bold.png";
 
 import "./../../../components/home/home.css";
 
@@ -82,7 +79,13 @@ function page() {
         <section className="mx-5 mr-10 mt-5 w-11/12 items-center justify-between 2xl:container lg:flex xl:mt-20 xl:px-10">
           <div className="flex flex-col gap-7">
             <div className="flex gap-2">
-              <Image src={wifiBold} alt="offer-img" className="h-14 w-14" />
+              <Image
+                width={14}
+                height={14}
+                src="/images/home/wifi-bold.png"
+                alt="offer-img"
+                className="h-14 w-14"
+              />
 
               <div>
                 <h5 className="text-sm font-medium">Swift Network</h5>
@@ -92,7 +95,13 @@ function page() {
               </div>
             </div>
             <div className="flex gap-2">
-              <Image src={wifiBold} alt="offer-img" className="h-14 w-14" />
+              <Image
+                width={14}
+                height={14}
+                src="/images/home/wifi-bold.png"
+                alt="offer-img"
+                className="h-14 w-14"
+              />
 
               <div>
                 <h5 className="text-sm font-medium">Swift Network</h5>
@@ -102,7 +111,13 @@ function page() {
               </div>
             </div>
             <div className="flex gap-2">
-              <Image src={wifiBold} alt="offer-img" className="h-14 w-14" />
+              <Image
+                width={14}
+                height={14}
+                src="/images/home/wifi-bold.png"
+                alt="offer-img"
+                className="h-14 w-14"
+              />
 
               <div>
                 <h5 className="text-sm font-medium">Swift Network</h5>
@@ -115,7 +130,9 @@ function page() {
 
           <div className="hidden lg:block">
             <Image
-              src={centerOffer}
+              width={14}
+              height={14}
+              src="/images/home/center-offer.png"
               alt="center-offer-img"
               className="w-[200px]"
             />
@@ -123,7 +140,13 @@ function page() {
 
           <div className="mt-5 flex flex-col gap-7 xl:mt-0">
             <div className="flex gap-2">
-              <Image src={wifiBold} alt="offer-img" className="h-14 w-14" />
+              <Image
+                width={14}
+                height={14}
+                src="/images/home/wifi-bold.png"
+                alt="offer-img"
+                className="h-14 w-14"
+              />
 
               <div>
                 <h5 className="text-sm font-medium">Swift Network</h5>
@@ -133,7 +156,13 @@ function page() {
               </div>
             </div>
             <div className="flex gap-2">
-              <Image src={wifiBold} alt="offer-img" className="h-14 w-14" />
+              <Image
+                width={14}
+                height={14}
+                src="/images/home/wifi-bold.png"
+                alt="offer-img"
+                className="h-14 w-14"
+              />
 
               <div>
                 <h5 className="text-sm font-medium">Swift Network</h5>
@@ -143,7 +172,13 @@ function page() {
               </div>
             </div>
             <div className="flex gap-2">
-              <Image src={wifiBold} alt="offer-img" className="h-14 w-14" />
+              <Image
+                width={14}
+                height={14}
+                src="/images/home/wifi-bold.png"
+                alt="offer-img"
+                className="h-14 w-14"
+              />
 
               <div>
                 <h5 className="text-sm font-medium">Swift Network</h5>
@@ -156,7 +191,13 @@ function page() {
         </section>
 
         <div className="absolute right-0 top-0">
-          <Image src={offer} alt="offer-img" className="h-[350px] w-[500px]" />
+          <Image
+            width={14}
+            height={14}
+            src="/images/home/offer.png"
+            alt="offer-img"
+            className="h-[350px] w-[500px]"
+          />
         </div>
       </section>
 
