@@ -10,8 +10,10 @@ import Offers from "~/components/home/offers";
 
 function page() {
   return (
-    <main>
-      <Hero />
+    <section>
+      <div className={`bg-subtle`}>
+        <Hero />
+      </div>
       <section className="w-full bg-[#fff]">
         <div className="py-10 text-center">
           {/* Welcome To SKICOM */}
@@ -208,7 +210,7 @@ function page() {
       <div>
         <Testimonial />
       </div>
-    </main>
+    </section>
   );
 }
 export default page;

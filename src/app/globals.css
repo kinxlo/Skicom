@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0, 0%, 96%;
+    --background: 0, 0%, 97%;
     --foreground: 0, 0%, 16%;
 
     --card: 0 0% 100%;
@@ -32,7 +32,7 @@
     --destructive-hover: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --subtle: 0, 0%, 96%;
+    --subtle: 0, 0%, 97%, 1;
     --subtle-hover: 214 32% 91%;
     --subtle-foreground: 222 47% 11%;
 
@@ -81,7 +81,7 @@
 }
 
 #nprogress .bar {
-  background: linear-gradient(90deg, #fff0bf, #007BC2) !important;
+  background: linear-gradient(90deg, #fff0bf, #007bc2) !important;
   box-shadow: 10px 0px 20px rgba(255, 240, 191, 0.641) !important;
   position: fixed;
   z-index: 99999999 !important;
@@ -93,11 +93,6 @@
 /* Base typography settings */
 @layer base {
   /* Body text */
-  body {
-    font-family: "Inter", sans-serif; /* Ensure a clean, readable font family */
-    color: hsl(var(--foreground));
-    line-height: 1.6; /* Ensures readability */
-  }
 
   /* Headings */
   h1,

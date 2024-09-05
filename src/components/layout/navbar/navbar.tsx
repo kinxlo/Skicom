@@ -67,9 +67,9 @@ const Navbar: FC = () => {
   };
 
   return (
-    <main className="">
+    <nav>
       <section
-        className={`navbar-container fixed left-0 right-0 z-20 mx-auto flex h-[65px] items-center justify-between bg-white px-5 shadow-md 2xl:container xl:mx-auto ${isBlurred ? "xl:mt-0" : "duration-300 xl:mt-5"} xl:w-11/12 xl:rounded-full`}
+        className={`fixed left-0 right-0 z-20 mx-auto flex h-[95px] items-center justify-between bg-white px-5 shadow-md xl:mx-auto ${isBlurred ? "xl:mt-0" : "duration-300 xl:mt-5"} max-w-[1240px] xl:rounded-full`}
       >
         <section>
           <Link href={"/"} onClick={handleNavbarClose}>
@@ -138,8 +138,13 @@ const Navbar: FC = () => {
             Sign Up
           </Link>
 
-          <CustomButton variant="primary" className="rounded-full" size="lg">
-            <Link href={"/login"}>Login</Link>
+          <CustomButton
+            href={`/login`}
+            variant="primary"
+            className="h-[46px] rounded-full"
+            size="lg"
+          >
+            Login
           </CustomButton>
         </section>
 
@@ -236,7 +241,7 @@ const Navbar: FC = () => {
           </motion.section>
         )}
       </AnimatePresence>
-    </main>
+    </nav>
   );
 };
 
