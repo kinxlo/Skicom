@@ -7,6 +7,7 @@ import "./home.css";
 
 import Image from "next/image";
 
+import { Wrapper } from "../layout/wrapper";
 import MobileOffers from "./mobile-offers";
 
 const offers = [
@@ -99,38 +100,44 @@ const offers = [
 const Offers = () => {
   return (
     <section className="relative bg-primary py-7 lg:py-10">
-      <main className="mx-auto w-11/12 2xl:container">
-        <div className="items-center lg:mr-10 lg:flex lg:justify-between">
-          <div>
-            <p className="mb-1 text-sm text-gray-300">Best Of SKICOM</p>
-            <h3 className="mb-3 text-xl text-white">Promotions And Offers</h3>
+      <Wrapper>
+        <main>
+          <div className="items-center text-center lg:mr-10 lg:flex lg:justify-between">
+            <div>
+              <p className="mb-1 text-[16px] text-gray-300 lg:text-sm">
+                Best Of SKICOM
+              </p>
+              <h3 className="mb-3 text-[26px] text-white lg:text-xl">
+                Promotions And Offers
+              </h3>
+            </div>
+
+            <div className=" ">
+              <CustomButton className="h-[44px] w-[180px] rounded-full text-[16px] text-primary lg:text-xs">
+                View All Plans
+              </CustomButton>
+            </div>
           </div>
 
-          <div>
-            <CustomButton className="rounded-full text-xs text-primary">
-              View All Plans
-            </CustomButton>
+          <div className="my-7 hidden items-center justify-between lg:flex">
+            {offers.map((item) => (
+              <DataCard
+                key={item.id}
+                price={item.price}
+                initialPrice={item.initialPrice}
+                plan={item.plan}
+                packages={item.packages}
+              />
+            ))}
           </div>
-        </div>
 
-        <div className="my-7 hidden items-center justify-between lg:flex">
-          {offers.map((item) => (
-            <DataCard
-              key={item.id}
-              price={item.price}
-              initialPrice={item.initialPrice}
-              plan={item.plan}
-              packages={item.packages}
-            />
-          ))}
-        </div>
+          <div className="mt-4 lg:hidden">
+            <MobileOffers offers={offers} />
+          </div>
+        </main>
+      </Wrapper>
 
-        <div className="mt-4 lg:hidden">
-          <MobileOffers offers={offers} />
-        </div>
-      </main>
-
-      <section>
+      <section className="hidden lg:block">
         <div>
           <Image
             src={offerDown}

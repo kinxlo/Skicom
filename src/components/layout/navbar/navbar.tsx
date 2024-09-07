@@ -69,7 +69,7 @@ const Navbar: FC = () => {
   return (
     <nav>
       <section
-        className={`fixed left-0 right-0 z-20 mx-auto flex h-[95px] items-center justify-between bg-white px-5 shadow-md xl:mx-auto ${isBlurred ? "xl:mt-0" : "duration-300 xl:mt-5"} max-w-[1240px] xl:rounded-full`}
+        className={`fixed left-0 right-0 z-20 mx-auto flex h-[95px] items-center justify-between bg-white px-5 shadow-md xl:mx-auto ${isBlurred ? "xl:mt-0" : "duration-300 xl:mt-5"} md:max-w-[1240px] xl:rounded-full`}
       >
         <section>
           <Link href={"/"} onClick={handleNavbarClose}>

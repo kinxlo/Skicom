@@ -3,6 +3,7 @@ import Image from "next/image";
 import offerDown from "../../../public/images/home/offer-ring-down.png";
 import offerUp from "../../../public/images/home/offer-ring-up.png";
 import JobCard from "../job-card/job-card";
+import { Wrapper } from "../layout/wrapper";
 import MobileJobOpening from "./mobile-job-opening";
 
 const offers = [
@@ -95,42 +96,44 @@ const offers = [
 const JobOffers = () => {
   return (
     <main className="relative bg-primary py-7 lg:py-10">
-      <section className="mx-auto w-11/12 2xl:container">
-        <div className="items-center lg:mr-10 lg:flex lg:justify-between">
-          <div>
-            <p className="mb-1 text-sm text-gray-300">Join Our Team</p>
-            <h3 className="mb-3 text-xl text-white">Current Job Openings</h3>
+      <Wrapper>
+        <section className="">
+          <div className="items-center lg:mr-10 lg:flex lg:justify-between">
+            <div className="text-center">
+              <p className="mb-1 text-2xl text-gray-300">Join Our Team</p>
+              <h3 className="mb-3 text-4xl text-white">Current Job Openings</h3>
+            </div>
           </div>
-        </div>
 
-        <div className="my-7 hidden items-center justify-between gap-5 lg:flex">
-          {offers.map((item) => (
-            <JobCard
-              key={item.id}
-              jobDescription={item.description}
-              position={item.position}
-              contract={item.location}
-              opening={item.opening}
-            />
-          ))}
-        </div>
+          <div className="my-7 hidden items-center justify-between gap-5 lg:flex">
+            {offers.map((item) => (
+              <JobCard
+                key={item.id}
+                jobDescription={item.description}
+                position={item.position}
+                contract={item.location}
+                opening={item.opening}
+              />
+            ))}
+          </div>
 
-        <div className="mt-4 lg:hidden">
-          <MobileJobOpening offers={offers} />
-        </div>
-      </section>
+          <div className="mt-4 lg:hidden">
+            <MobileJobOpening offers={offers} />
+          </div>
+        </section>
+      </Wrapper>
 
       <section>
-        <div>
+        <div className="hidden lg:block">
           <Image
             src={offerDown}
             alt="offer-ring-down"
-            className="absolute bottom-0 left-0 z-0 w-[300px]"
+            className="absolute bottom-0 left-0 z-0 w-[400px]"
           />
           <Image
             src={offerUp}
             alt="offer-ring-up"
-            className="absolute right-0 top-0 z-0 w-[300px]"
+            className="absolute right-0 top-0 z-0 w-[400px]"
           />
         </div>
       </section>

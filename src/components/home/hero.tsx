@@ -15,9 +15,9 @@ const Hero = () => {
   return (
     <section>
       <section className="relative">
-        <div className="bg-[100%] bg-no-repeat lg:bg-[url('/images/home/Hero.png')]">
-          <Wrapper className="flex h-[500px] items-center justify-center lg:h-[730px] lg:justify-start">
-            <div className="relative max-w-[686px] text-center lg:text-left">
+        <div className="bg-[100%] bg-no-repeat pt-14 lg:bg-[url('/images/home/Hero.png')] lg:pt-0">
+          <Wrapper className="flex h-[400px] items-center justify-center lg:h-[730px] lg:justify-start">
+            <div className="relative max-w-[350px] text-center lg:max-w-[686px] lg:text-left">
               <h1 className="text-[32px] font-bold leading-[44px] text-neutral-dark-1 lg:text-[56px] lg:leading-[78px]">
                 Get Connected With Us & Stay Connected
               </h1>
@@ -41,8 +41,8 @@ const Hero = () => {
         </div>
         <Link href={"/contact"}>
           <BlurImage
-            className={`absolute bottom-3 right-12`}
-            width={120}
+            className={`absolute -bottom-5 right-12 lg:bottom-3`}
+            width={170}
             height={50}
             src={`/images/home/help.png`}
             alt="help"

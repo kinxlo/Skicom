@@ -2,6 +2,7 @@ import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 
 import ArticlesCard from "~/components/common/articles-card/articles-card";
+import { Wrapper } from "~/components/layout/wrapper";
 import one from "../../../../public/images/customer-care/1.png";
 import two from "../../../../public/images/customer-care/2.png";
 import three from "../../../../public/images/customer-care/3.png";
@@ -80,42 +81,44 @@ const article = [
 
 const Articles = () => {
   return (
-    <main className="mx-auto w-11/12 py-3 2xl:container lg:py-10">
-      <Link
-        href={"customer-care"}
-        className="flex items-center gap-3 text-sm font-medium text-primary"
-      >
-        {" "}
-        <span>
-          <ChevronLeft size={20} />
-        </span>{" "}
-        Back to Customer Care
-      </Link>
+    <main className="bg-[#F6F6F6]">
+      <Wrapper className="pt-32 lg:pt-40">
+        <Link
+          href={"customer-care"}
+          className="flex items-center gap-3 text-xl font-medium text-primary"
+        >
+          {" "}
+          <span>
+            <ChevronLeft size={20} />
+          </span>{" "}
+          Back to Customer Care
+        </Link>
 
-      <div className="mt-7">
-        <h2 className="text-2xl font-semibold text-neutral-dark-1">
-          All Articles
-        </h2>
-        <p className="mt-1 text-sm">
-          Read everything you need to know about our products and services.
-        </p>
-      </div>
-
-      <section>
-        <div className="mt-8 grid w-full grid-cols-1 gap-7 lg:grid-cols-2 2xl:grid-cols-3">
-          {article.map((a) => (
-            <ArticlesCard
-              key={a.id}
-              articleImage={a.articleImage}
-              heading={a.heading}
-              dateSent={a.dateSent}
-              subHeading={a.subHeading}
-            />
-          ))}
+        <div className="mt-10 lg:mt-7">
+          <h2 className="text-4xl font-semibold text-neutral-dark-1">
+            All Articles
+          </h2>
+          <p className="mt-2 text-lg">
+            Read everything you need to know about our products and services.
+          </p>
         </div>
 
-        <div className="mt-7 text-center text-sm">Pagination</div>
-      </section>
+        <section>
+          <div className="mt-8 grid w-full grid-cols-1 gap-7 lg:grid-cols-2">
+            {article.map((a) => (
+              <ArticlesCard
+                key={a.id}
+                articleImage={a.articleImage}
+                heading={a.heading}
+                dateSent={a.dateSent}
+                subHeading={a.subHeading}
+              />
+            ))}
+          </div>
+
+          <div className="mt-7 text-center text-sm">Pagination</div>
+        </section>
+      </Wrapper>
     </main>
   );
 };

@@ -22,7 +22,7 @@ const JobCard = ({
   opening,
 }: jobProperties) => {
   return (
-    <main className="my-3 w-[320px] rounded-xl bg-default p-5">
+    <main className="my-3 h-[460px] w-[400px] rounded-xl bg-default p-5">
       <h3 className="text-2xl font-medium text-neutral-dark-1">{position}</h3>
 
       <p className="text-destructive">
@@ -39,16 +39,19 @@ const JobCard = ({
         {jobDescription.map((item) => (
           <li key={item.id}>
             <div className="flex gap-2">
-              <Image src={check} className="h-5 w-5" alt={""} />
-              <p className="text-xs text-gray-500">{item.descriptions}</p>
+              <Image src={check} className="h-6 w-6" alt={""} />
+              <p className="text-[16px] text-gray-500">{item.descriptions}</p>
             </div>
           </li>
         ))}
-        <CustomButton variant="primary" className="w-full rounded-full">
+        <CustomButton
+          variant="primary"
+          className="h-12 w-full rounded-full text-[16px]"
+        >
           Apply Now{" "}
           <span>
             {" "}
-            <ChevronRight size={15} />
+            <ChevronRight size={16} />
           </span>
         </CustomButton>
       </ul>

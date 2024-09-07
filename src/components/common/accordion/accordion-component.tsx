@@ -1,3 +1,4 @@
+import { Wrapper } from "~/components/layout/wrapper";
 import {
   Accordion,
   AccordionContent,
@@ -7,20 +8,20 @@ import {
 
 const Accordions = () => {
   return (
-    <div>
+    <Wrapper>
       <Accordion
         type="single"
         collapsible
-        className="my-5 w-full rounded-lg bg-[#F8FAFC] px-5"
+        className="my-5 w-full space-y-5 rounded-lg bg-[#F8FAFC] px-5"
       >
         <AccordionItem value="item-1">
           <AccordionTrigger>
-            <p className="text-sm font-bold">
+            <p className="text-lg font-bold text-[#090914]">
               {" "}
               Q. How this theme is different from others in market?
             </p>
           </AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="text-lg">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -29,12 +30,12 @@ const Accordions = () => {
         </AccordionItem>
         <AccordionItem value="item-2">
           <AccordionTrigger>
-            <p className="text-sm font-bold">
+            <p className="text-lg font-bold text-[#090914]">
               {" "}
               Q. Does this theme supports plugins?
             </p>
           </AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="text-lg">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -43,12 +44,12 @@ const Accordions = () => {
         </AccordionItem>
         <AccordionItem value="item-3">
           <AccordionTrigger>
-            <p className="text-sm font-bold">
+            <p className="text-lg font-bold text-[#090914]">
               {" "}
               Q. How this theme is different from others in market?
             </p>
           </AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="text-lg">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -57,12 +58,12 @@ const Accordions = () => {
         </AccordionItem>
         <AccordionItem value="item-4">
           <AccordionTrigger>
-            <p className="text-sm font-bold">
+            <p className="text-lg font-bold text-[#090914]">
               {" "}
               Q. Does this theme supports plugins?
             </p>
           </AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="text-lg">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -71,12 +72,12 @@ const Accordions = () => {
         </AccordionItem>
         <AccordionItem value="item-5">
           <AccordionTrigger>
-            <p className="text-sm font-bold">
+            <p className="text-lg font-bold text-[#090914]">
               {" "}
               Q. How this theme is different from others in market?
             </p>
           </AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="text-lg">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -85,12 +86,12 @@ const Accordions = () => {
         </AccordionItem>
         <AccordionItem value="item-6">
           <AccordionTrigger>
-            <p className="text-sm font-bold">
+            <p className="text-lg font-bold text-[#090914]">
               {" "}
               Q. Does this theme supports plugins?
             </p>
           </AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="text-lg">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -98,7 +99,7 @@ const Accordions = () => {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
-    </div>
+    </Wrapper>
   );
 };
 
