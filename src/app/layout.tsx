@@ -12,6 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Skycom",
   description: "Skycom",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
