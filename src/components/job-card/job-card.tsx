@@ -22,7 +22,7 @@ const JobCard = ({
   opening,
 }: jobProperties) => {
   return (
-    <main className="my-3 h-[460px] w-[400px] rounded-xl bg-default p-5">
+    <main className="my-3 w-[280px] rounded-xl bg-default p-5 md:h-[460px] md:w-[400px]">
       <h3 className="text-2xl font-medium text-neutral-dark-1">{position}</h3>
 
       <p className="text-destructive">

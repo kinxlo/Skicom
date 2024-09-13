@@ -37,7 +37,7 @@ const Page = () => {
               </h3>
               <p className="relative my-2 max-w-lg text-[28px] font-semibold leading-[50px] text-neutral-dark-1 lg:text-4xl">
                 New Leading Telecoms Provider{" "}
-                <span className="absolute mb-10 ms-3 rounded-full border border-neutral-dark-2 px-10 py-2.5 text-sm text-neutral-dark-2">
+                <span className="absolute ms-3 rounded-full border border-neutral-dark-2 px-5 py-2.5 text-sm text-neutral-dark-2 lg:px-10">
                   Established 2020.
                 </span>
               </p>
@@ -148,10 +148,10 @@ const Page = () => {
             <h3 className="text-lg font-semibold text-neutral-dark-2">
               Our Mission & Vision
             </h3>
-            <p className="my-2 max-w-[300px] text-3xl font-semibold text-neutral-dark-1">
+            <p className="my-2 max-w-[400pc] text-3xl font-semibold text-neutral-dark-1 md:max-w-[300px]">
               Transforming Connectivity, Inspiring the Future
             </p>
-            <p className="max-w-sm font-medium">
+            <p className="mt-5 max-w-sm font-medium">
               At Skicom, our mission is to revolutionize network services and
               connectivity through innovative, reliable, and accessible
               solutions. We strive to enhance your digital journey with

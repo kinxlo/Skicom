@@ -5,7 +5,7 @@ import BlurImage from "~/components/miscellaneous/blur-image";
 
 export const SectionOne = () => {
   return (
-    <Wrapper className="py-[87px] text-center">
+    <Wrapper className="py-[50px] text-center lg:py-[87px]">
       <p className="mx-auto w-fit text-[27px] font-semibold text-neutral-dark-2">
         Welcome to SKICOM
       </p>

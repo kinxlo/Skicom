@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="lg:pt-0">
         <Wrapper className="relative flex h-[400px] items-center justify-center pt-14 lg:h-[730px] lg:justify-start">
           <div className="relative z-10 mx-auto w-[730px] xl:mx-0">
-            <h1 className="text-[32px] font-bold leading-[44px] text-neutral-dark-1 lg:text-[56px] lg:leading-[78px]">
+            <h1 className="mt-10 text-[32px] font-bold leading-[44px] text-neutral-dark-1 lg:mt-0 lg:text-[56px] lg:leading-[78px]">
               Get Connected With Us & Stay Connected
             </h1>
 
@@ -27,7 +27,7 @@ const Hero = () => {
               height={50}
               src={"/images/home/wifi.png"}
               alt="hero-wifi"
-              className="absolute left-[-1rem] top-[-3rem] lg:left-[-2rem] lg:top-[-2rem]"
+              className="absolute left-[-1rem] top-[-0.5rem] lg:left-[-2rem] lg:top-[-2rem]"
             />
           </div>
           <Link href={"/contact"} className="hidden lg:block">
@@ -45,6 +45,7 @@ const Hero = () => {
             height={800}
             src={`/images/home/Hero.png`}
             alt="help"
+            unoptimized
           />
         </Wrapper>
       </div>

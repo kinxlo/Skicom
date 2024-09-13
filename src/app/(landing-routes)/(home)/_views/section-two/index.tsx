@@ -3,7 +3,7 @@ import BlurImage from "~/components/miscellaneous/blur-image";
 
 export const SectionTwo = () => {
   return (
-    <section className="relative bg-subtle bg-[url('/images/home/offer.png')] bg-right-top bg-no-repeat py-5 xl:py-[85px]">
+    <section className="relative bg-subtle bg-right-top bg-no-repeat py-5 lg:bg-[url('/images/home/offer.png')] xl:py-[85px]">
       <Wrapper>
         <div className="text-center">
           <p className="mx-auto w-fit text-[27px] font-semibold text-neutral-dark-2">
@@ -18,18 +18,18 @@ export const SectionTwo = () => {
           <div className="flex flex-col gap-7">
             <div className="flex gap-2">
               <BlurImage
-                width={90}
-                height={88}
+                width={78}
+                height={76}
                 src="/images/home/wifi-bold.png"
                 alt="offer-img"
-                className="h-[90px] w-24 rounded-lg"
+                className="h-[85px] w-[82px] rounded-lg lg:h-[90px] lg:w-24"
               />
 
               <div>
                 <h5 className="text-xl font-medium text-neutral-dark-2">
                   Swift Network
                 </h5>
-                <p className="mt-2 max-w-[270px] text-lg">
+                <p className="mt-1 max-w-[270px] text-[17px] lg:mt-2 lg:text-lg">
                   Lorem ipsum dolor sit amet ctetur. Lorem libero arcu ut.
                 </p>
               </div>
@@ -40,14 +40,14 @@ export const SectionTwo = () => {
                 height={88}
                 src="/images/home/wifi-bold.png"
                 alt="offer-img"
-                className="h-[90px] w-24 rounded-lg"
+                className="h-[85px] w-[82px] rounded-lg lg:h-[90px] lg:w-24"
               />
 
               <div>
                 <h5 className="text-xl font-medium text-neutral-dark-2">
                   Swift Network
                 </h5>
-                <p className="mt-2 max-w-[270px] text-lg">
+                <p className="mt-1 max-w-[270px] text-[17px] lg:mt-2 lg:text-lg">
                   Lorem ipsum dolor sit amet ctetur. Lorem libero arcu ut.
                 </p>
               </div>
@@ -58,14 +58,14 @@ export const SectionTwo = () => {
                 height={88}
                 src="/images/home/wifi-bold.png"
                 alt="offer-img"
-                className="h-[90px] w-24 rounded-lg"
+                className="h-[85px] w-[82px] rounded-lg lg:h-[90px] lg:w-24"
               />
 
               <div>
                 <h5 className="text-xl font-medium text-neutral-dark-2">
                   Swift Network
                 </h5>
-                <p className="mt-2 max-w-[270px] text-lg">
+                <p className="mt-1 max-w-[270px] text-[17px] lg:mt-2 lg:text-lg">
                   Lorem ipsum dolor sit amet ctetur. Lorem libero arcu ut.
                 </p>
               </div>
@@ -88,14 +88,14 @@ export const SectionTwo = () => {
                 height={88}
                 src="/images/home/wifi-bold.png"
                 alt="offer-img"
-                className="h-[90px] w-24 rounded-lg"
+                className="h-[85px] w-[82px] rounded-lg lg:h-[90px] lg:w-24"
               />
 
               <div>
                 <h5 className="text-xl font-medium text-neutral-dark-2">
                   Swift Network
                 </h5>
-                <p className="mt-2 max-w-[270px] text-lg">
+                <p className="mt-1 max-w-[270px] text-[17px] lg:mt-2 lg:text-lg">
                   Lorem ipsum dolor sit amet ctetur. Lorem libero arcu ut.
                 </p>
               </div>
@@ -106,14 +106,14 @@ export const SectionTwo = () => {
                 height={88}
                 src="/images/home/wifi-bold.png"
                 alt="offer-img"
-                className="h-[90px] w-24 rounded-lg"
+                className="h-[85px] w-[82px] rounded-lg lg:h-[90px] lg:w-24"
               />
 
               <div>
                 <h5 className="text-xl font-medium text-neutral-dark-2">
                   Swift Network
                 </h5>
-                <p className="mt-2 max-w-[270px] text-lg">
+                <p className="mt-1 max-w-[270px] text-[17px] lg:mt-2 lg:text-lg">
                   Lorem ipsum dolor sit amet ctetur. Lorem libero arcu ut.
                 </p>
               </div>
@@ -124,14 +124,14 @@ export const SectionTwo = () => {
                 height={88}
                 src="/images/home/wifi-bold.png"
                 alt="offer-img"
-                className="h-[90px] w-24 rounded-lg"
+                className="h-[85px] w-[82px] rounded-lg lg:h-[90px] lg:w-24"
               />
 
               <div>
                 <h5 className="text-xl font-medium text-neutral-dark-2">
                   Swift Network
                 </h5>
-                <p className="mt-2 max-w-[270px] text-lg">
+                <p className="mt-1 max-w-[270px] text-[17px] lg:mt-2 lg:text-lg">
                   Lorem ipsum dolor sit amet ctetur. Lorem libero arcu ut.
                 </p>
               </div>

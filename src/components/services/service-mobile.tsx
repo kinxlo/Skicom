@@ -1,15 +1,5 @@
-"use client";
-
-import Image from "next/image";
-import { useState } from "react";
-
-import offerUp from "../../../public/images/home/offer-ring-up.png";
-import offerMiddle from "../../../public/images/services/offerMiddle.png";
-import offerRight from "../../../public/images/services/offerRight.png";
-import CustomButton from "../common/common-button/common-button";
 import DataCard from "../common/data-card/data-card";
-import { Wrapper } from "../layout/wrapper";
-import { ServiceMobile } from "./service-mobile";
+import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 
 const offers = [
   {
@@ -688,82 +678,25 @@ const offers = [
   },
 ];
 
-const DataAirtime = () => {
-  const [serviceType, setServiceType] = useState("data");
-
-  const choosenType = offers.filter((p) => p.type === serviceType);
-
+export const ServiceMobile = () => {
   return (
-    <main className="relative bg-primary py-10 pb-4">
-      <Wrapper>
-        <section className="">
-          <div className="text-center">
-            <h4 className="text-[17px] text-[#D4D4D4] lg:text-xl">
-              Our Airtime & Data Plans
-            </h4>
-            <p className="text-[28px] text-white lg:text-[44px]">
-              Choose The Perfect Plan For You
-            </p>
-          </div>
-
-          <div className="mx-auto mt-2 hidden w-[400px] rounded-full border border-black lg:flex">
-            <CustomButton
-              className={`w-full rounded-full px-10 ${serviceType === "data" ? "bg-white text-neutral-dark-1 duration-300" : "bg-transparent px-10 text-white duration-300"} h-[50px]`}
-              onClick={() => setServiceType("data")}
-            >
-              Data
-            </CustomButton>
-            <CustomButton
-              className={`w-full rounded-full px-10 ${serviceType === "airtime" ? "bg-white text-neutral-dark-1 duration-300" : "bg-transparent px-10 text-white duration-300"} h-[50px]`}
-              onClick={() => setServiceType("airtime")}
-            >
-              Airtime
-            </CustomButton>
-          </div>
-
-          <div className="mt-16 hidden items-center gap-5 lg:grid lg:grid-cols-3 xl:grid-cols-4">
-            {choosenType.map((item, index) => (
-              <DataCard
-                key={index}
-                price={item.price}
-                plan={item.plan}
-                packages={item.packages}
-                initialPrice={undefined}
-              />
-            ))}
-          </div>
-
-          <div className="lg:hidden">
-            {/* mobile view */}
-
-            <ServiceMobile />
-          </div>
-
-          <div className="mt-5 text-center text-sm text-white">
-            Pagination here
-          </div>
-        </section>
-      </Wrapper>
-
-      <div>
-        <Image
-          src={offerRight}
-          alt="offer-ring-down"
-          className="absolute bottom-0 right-0 z-0 hidden w-[400px] lg:block"
-        />
-        <Image
-          src={offerMiddle}
-          alt="offer-ring-down"
-          className="absolute left-0 top-[30%] hidden h-[500px] w-[60px] lg:block"
-        />
-        <Image
-          src={offerUp}
-          alt="offer-ring-up"
-          className="absolute right-0 top-0 hidden w-[500px] lg:block"
-        />
-      </div>
+    <main>
+      <Carousel className="z-10 w-full">
+        <CarouselContent>
+          {offers.map((item, index) => (
+            <CarouselItem key={index} className="basis-1/1">
+              <div className="">
+                <DataCard
+                  price={item.price}
+                  initialPrice={item.initialPrice}
+                  plan={item.plan}
+                  packages={item.packages}
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
     </main>
   );
 };
-
-export default DataAirtime;

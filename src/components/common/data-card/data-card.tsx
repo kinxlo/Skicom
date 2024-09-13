@@ -22,10 +22,12 @@ const DataCard = ({ price, initialPrice, plan, packages }: cardProperties) => {
 
   return (
     <div
-      className={`card relative rounded-[2rem] bg-[url('/images/home/card-clip-bg.png')] ${pathName === "/services" ? "w-[300px]" : "w-[400px]"} p-[43px]`}
+      className={`card relative rounded-[2rem] bg-[url('/images/home/card-clip-bg.png')] ${pathName === "/services" ? "w-[300px]" : "w-[310px] lg:w-[400px]"} p-[30px] lg:p-[43px]`}
     >
       <div className="mt-3 flex items-center gap-4">
-        <p className="text-6xl font-semibold text-neutral-dark-1">#{price}</p>
+        <p className="text-[50px] font-semibold text-neutral-dark-1 lg:text-6xl">
+          #{price}
+        </p>
         <p className="text-3xl font-medium text-red-600 line-through">
           {initialPrice && "#"}
           {initialPrice}
@@ -49,7 +51,7 @@ const DataCard = ({ price, initialPrice, plan, packages }: cardProperties) => {
         ))}
       </ul>
 
-      <button className="absolute bottom-[43px] right-[43px] rounded-full bg-[#EFEFEF] p-2">
+      <button className="absolute bottom-[43px] right-[10px] rounded-full bg-[#EFEFEF] p-2 lg:right-[43px]">
         <ChevronRight size={33} />
       </button>
     </div>

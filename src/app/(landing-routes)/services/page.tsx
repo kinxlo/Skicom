@@ -24,10 +24,10 @@ const Page = () => {
         <Wrapper>
           <div className="mx-auto py-10 lg:mt-[30px]">
             <div className="space-y-2 text-center">
-              <h3 className="text-2xl font-semibold text-neutral-dark-2">
+              <h3 className="text-[17px] font-semibold text-neutral-dark-2 md:text-2xl">
                 Our Services
               </h3>
-              <p className="text-[28px] text-[44px] font-bold text-neutral-dark-1">
+              <p className="text-[28px] font-bold text-neutral-dark-1 md:text-[44px]">
                 Experience Superior Network Services
               </p>
               <p className="mx-auto max-w-2xl text-xl">

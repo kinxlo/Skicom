@@ -106,7 +106,7 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="mt-6">
+              <div className="md:mt-6">
                 {/* form */}
                 <form className="w-full space-y-5">
                   <Input

@@ -30,11 +30,13 @@
 }
 
 /* In your CSS file (e.g., home.css) */
-.bg-offers {
-  background-image: url("/images/home/offer-ring-up.png"),
-    url("/images/home/offer-ring-down.png");
-  background-position:
-    top right,
-    bottom left;
-  background-repeat: no-repeat, no-repeat;
+@media (min-width: 1024px) {
+  .bg-offers {
+    background-image: url("/images/home/offer-ring-up.png"),
+      url("/images/home/offer-ring-down.png");
+    background-position:
+      top right,
+      bottom left;
+    background-repeat: no-repeat, no-repeat;
+  }
 }
