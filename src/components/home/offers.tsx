@@ -1,11 +1,7 @@
-import offerDown from "../../../public/images/home/offer-ring-down.png";
-import offerUp from "../../../public/images/home/offer-ring-up.png";
 import CustomButton from "../common/common-button/common-button";
 import DataCard from "../common/data-card/data-card";
 
 import "./home.css";
-
-import Image from "next/image";
 
 import { Wrapper } from "../layout/wrapper";
 import MobileOffers from "./mobile-offers";
@@ -99,27 +95,27 @@ const offers = [
 
 const Offers = () => {
   return (
-    <section className="relative bg-primary py-7 lg:py-10">
+    <section className="bg-offers relative bg-primary py-7 lg:py-[90px]">
       <Wrapper>
-        <main>
-          <div className="items-center text-center lg:mr-10 lg:flex lg:justify-between">
+        <section>
+          <div className="mb-[51px] flex flex-col items-center justify-between md:flex-row">
             <div>
-              <p className="mb-1 text-[16px] text-gray-300 lg:text-sm">
+              <p className="mb-1 text-[20px] text-gray-300 lg:text-[24px]">
                 Best Of SKICOM
               </p>
-              <h3 className="mb-3 text-[26px] text-white lg:text-xl">
+              <h3 className="mb-3 text-[26px] text-white lg:text-[44px]">
                 Promotions And Offers
               </h3>
             </div>
 
-            <div className=" ">
-              <CustomButton className="h-[44px] w-[180px] rounded-full text-[16px] text-primary lg:text-xs">
+            <div>
+              <CustomButton className="h-[44px] w-[180px] rounded-full text-primary">
                 View All Plans
               </CustomButton>
             </div>
           </div>
 
-          <div className="my-7 hidden items-center justify-between lg:flex">
+          <div className="hidden flex-wrap items-center justify-between lg:flex">
             {offers.map((item) => (
               <DataCard
                 key={item.id}
@@ -134,23 +130,8 @@ const Offers = () => {
           <div className="mt-4 lg:hidden">
             <MobileOffers offers={offers} />
           </div>
-        </main>
+        </section>
       </Wrapper>
-
-      <section className="hidden lg:block">
-        <div>
-          <Image
-            src={offerDown}
-            alt="offer-ring-down"
-            className="absolute bottom-0 left-0 w-[300px]"
-          />
-          <Image
-            src={offerUp}
-            alt="offer-ring-up"
-            className="absolute right-0 top-0 w-[300px]"
-          />
-        </div>
-      </section>
     </section>
   );
 };

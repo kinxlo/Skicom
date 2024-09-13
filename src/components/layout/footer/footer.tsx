@@ -17,7 +17,7 @@ const Footer: FC = () => {
   return (
     <main className="w-full bg-black py-10 md:py-14">
       <Wrapper>
-        <section className="mx-auto w-11/12 2xl:container">
+        <section>
           <div>
             <NewsLetter />
           </div>

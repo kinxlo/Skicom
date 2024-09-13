@@ -1,5 +1,3 @@
-// import "./home.css";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,48 +5,49 @@ import CustomButton from "../common/common-button/common-button";
 import { Wrapper } from "../layout/wrapper";
 import BlurImage from "../miscellaneous/blur-image";
 
-// import { Wrapper } from "../layout/wrapper";
-
-// import BlurImage from "../miscellaneous/blur-image";
-
 const Hero = () => {
   return (
-    <section>
-      <section className="relative">
-        <div className="bg-[100%] bg-no-repeat pt-14 lg:bg-[url('/images/home/Hero.png')] lg:pt-0">
-          <Wrapper className="flex h-[400px] items-center justify-center lg:h-[730px] lg:justify-start">
-            <div className="relative max-w-[350px] text-center lg:max-w-[686px] lg:text-left">
-              <h1 className="text-[32px] font-bold leading-[44px] text-neutral-dark-1 lg:text-[56px] lg:leading-[78px]">
-                Get Connected With Us & Stay Connected
-              </h1>
+    <section className="bg-subtle">
+      <div className="lg:pt-0">
+        <Wrapper className="relative flex h-[400px] items-center justify-center pt-14 lg:h-[730px] lg:justify-start">
+          <div className="relative z-10 mx-auto w-[730px] xl:mx-0">
+            <h1 className="text-[32px] font-bold leading-[44px] text-neutral-dark-1 lg:text-[56px] lg:leading-[78px]">
+              Get Connected With Us & Stay Connected
+            </h1>
 
-              <CustomButton
-                className="mt-8 h-[46px] w-[220px] rounded-full"
-                variant="primary"
-              >
-                Sign Up With Skicom
-              </CustomButton>
+            <CustomButton
+              className="mt-8 h-[46px] w-[220px] rounded-full"
+              variant="primary"
+            >
+              Sign Up With Skicom
+            </CustomButton>
 
-              <Image
-                width={50}
-                height={50}
-                src={"/images/home/wifi.png"}
-                alt="hero-wifi"
-                className="absolute left-[-1rem] top-[-3rem] lg:left-[-2rem] lg:top-[-2rem]"
-              />
-            </div>
-          </Wrapper>
-        </div>
-        <Link href={"/contact"}>
+            <Image
+              width={50}
+              height={50}
+              src={"/images/home/wifi.png"}
+              alt="hero-wifi"
+              className="absolute left-[-1rem] top-[-3rem] lg:left-[-2rem] lg:top-[-2rem]"
+            />
+          </div>
+          <Link href={"/contact"} className="hidden lg:block">
+            <BlurImage
+              className="absolute bottom-[30px] right-0 z-10"
+              width={170}
+              height={50}
+              src={`/images/home/help.png`}
+              alt="help"
+            />
+          </Link>
           <BlurImage
-            className={`absolute -bottom-5 right-12 lg:bottom-3`}
-            width={170}
-            height={50}
-            src={`/images/home/help.png`}
+            className="absolute bottom-0 right-0 hidden xl:block"
+            width={1440}
+            height={800}
+            src={`/images/home/Hero.png`}
             alt="help"
           />
-        </Link>
-      </section>
+        </Wrapper>
+      </div>
     </section>
   );
 };

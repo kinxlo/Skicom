@@ -1,7 +1,6 @@
 "use client";
 
-import "./data-card.css";
-
+// import "./data-card.css";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -22,8 +21,8 @@ const DataCard = ({ price, initialPrice, plan, packages }: cardProperties) => {
   const pathName = usePathname();
 
   return (
-    <main
-      className={`card relative z-10 ${pathName === "/services" ? "w-[300px]" : "w-[400px]"} bg-white p-5`}
+    <div
+      className={`card relative rounded-[2rem] bg-[url('/images/home/card-clip-bg.png')] ${pathName === "/services" ? "w-[300px]" : "w-[400px]"} p-[43px]`}
     >
       <div className="mt-3 flex items-center gap-4">
         <p className="text-6xl font-semibold text-neutral-dark-1">#{price}</p>
@@ -50,10 +49,10 @@ const DataCard = ({ price, initialPrice, plan, packages }: cardProperties) => {
         ))}
       </ul>
 
-      <button className="absolute bottom-7 right-3 rounded-full bg-[#EFEFEF] p-2">
+      <button className="absolute bottom-[43px] right-[43px] rounded-full bg-[#EFEFEF] p-2">
         <ChevronRight size={33} />
       </button>
-    </main>
+    </div>
   );
 };
 
