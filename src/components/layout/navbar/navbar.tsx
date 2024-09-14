@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FC, useEffect, useState } from "react";
 
 import CustomButton from "~/components/common/common-button/common-button";
@@ -41,13 +42,9 @@ const menuVariant = {
 };
 
 const Navbar: FC = () => {
-  const [active, setActive] = useState<string>("/");
   const [isOpen, setOpen] = useState(false);
   const [isBlurred, setIsBlurred] = useState(false);
-
-  const handleClick = (item: string) => {
-    setActive(item);
-  };
+  const router = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,50 +75,43 @@ const Navbar: FC = () => {
         </section>
 
         <section className="navbar hidden xl:block">
-          <ul
-            className={`nav-list flex items-center gap-7 text-sm font-semibold`}
-          >
+          <ul className="nav-list flex items-center gap-7 text-sm font-semibold">
             <li>
               <Link
-                href={"/"}
-                className={`nav-item ${active === "/" ? "active" : ""} ${active === "/" ? "text-[#007CC3]" : ""}`}
-                onClick={() => handleClick("/")}
+                href="/"
+                className={`nav-item ${router === "/" ? "active text-[#007CC3]" : ""}`}
               >
                 Home
               </Link>
             </li>
             <li>
               <Link
-                href={"/about"}
-                className={`nav-item ${active === "/about" ? "active" : ""} ${active === "/about" ? "text-[#007CC3]" : ""}`}
-                onClick={() => handleClick("/about")}
+                href="/about"
+                className={`nav-item ${router === "/about" ? "active text-[#007CC3]" : ""}`}
               >
                 About Us
               </Link>
             </li>
             <li>
               <Link
-                href={"/services"}
-                className={`nav-item ${active === "services" ? "active" : ""} ${active === "services" ? "text-[#007CC3]" : ""}`}
-                onClick={() => handleClick("services")}
+                href="/services"
+                className={`nav-item ${router === "/services" ? "active text-[#007CC3]" : ""}`}
               >
                 Services
               </Link>
             </li>
             <li>
               <Link
-                href={"/"}
-                className={`nav-item ${active === "stores" ? "active" : ""} ${active === "stores" ? "text-[#007CC3]" : ""}`}
-                onClick={() => handleClick("stores")}
+                href="/stores"
+                className={`nav-item ${router === "/stores" ? "active text-[#007CC3]" : ""}`}
               >
                 Stores
               </Link>
             </li>
             <li>
               <Link
-                href={"/contact"}
-                className={`nav-item ${active === "contact" ? "active" : ""} ${active === "contact" ? "text-[#007CC3]" : ""}`}
-                onClick={() => handleClick("contact")}
+                href="/contact"
+                className={`nav-item ${router === "/contact" ? "active text-[#007CC3]" : ""}`}
               >
                 Contact Us
               </Link>
@@ -134,12 +124,12 @@ const Navbar: FC = () => {
             <Search size={20} />
           </button>
 
-          <Link href={"/register"} className="text-sm font-semibold">
+          <Link href="/register" className="text-sm font-semibold">
             Sign Up
           </Link>
 
           <CustomButton
-            href={`/login`}
+            href="/login"
             variant="primary"
             className="h-[46px] rounded-full"
             size="lg"
@@ -163,50 +153,43 @@ const Navbar: FC = () => {
             animate="animate"
             exit="exit"
           >
-            <ul
-              className={`nav-list flex flex-col items-center gap-7 text-sm font-semibold`}
-            >
+            <ul className="nav-list flex flex-col items-center gap-7 text-sm font-semibold">
               <li onClick={handleNavbarClose}>
                 <Link
-                  href={"/"}
-                  className={`nav-item ${active === "/" ? "active" : ""} ${active === "/" ? "text-[#007CC3]" : ""}`}
-                  onClick={() => handleClick("/")}
+                  href="/"
+                  className={`nav-item ${router === "/" ? "active text-[#007CC3]" : ""}`}
                 >
                   Home
                 </Link>
               </li>
               <li onClick={handleNavbarClose}>
                 <Link
-                  href={"/about"}
-                  className={`nav-item ${active === "/about" ? "active" : ""} ${active === "/about" ? "text-[#007CC3]" : ""}`}
-                  onClick={() => handleClick("/about")}
+                  href="/about"
+                  className={`nav-item ${router === "/about" ? "active text-[#007CC3]" : ""}`}
                 >
                   About Us
                 </Link>
               </li>
               <li onClick={handleNavbarClose}>
                 <Link
-                  href={"/services"}
-                  className={`nav-item ${active === "services" ? "active" : ""} ${active === "services" ? "text-[#007CC3]" : ""}`}
-                  onClick={() => handleClick("services")}
+                  href="/services"
+                  className={`nav-item ${router === "/services" ? "active text-[#007CC3]" : ""}`}
                 >
                   Services
                 </Link>
               </li>
               <li onClick={handleNavbarClose}>
                 <Link
-                  href={"/"}
-                  className={`nav-item ${active === "stores" ? "active" : ""} ${active === "stores" ? "text-[#007CC3]" : ""}`}
-                  onClick={() => handleClick("stores")}
+                  href="/stores"
+                  className={`nav-item ${router === "/stores" ? "active text-[#007CC3]" : ""}`}
                 >
                   Stores
                 </Link>
               </li>
               <li onClick={handleNavbarClose}>
                 <Link
-                  href={"/contact"}
-                  className={`nav-item ${active === "contact" ? "active" : ""} ${active === "contact" ? "text-[#007CC3]" : ""}`}
-                  onClick={() => handleClick("contact")}
+                  href="/contact"
+                  className={`nav-item ${router === "/contact" ? "active text-[#007CC3]" : ""}`}
                 >
                   Contact Us
                 </Link>
@@ -218,7 +201,7 @@ const Navbar: FC = () => {
 
               <li className="mr-4">
                 <Link
-                  href={"/register"}
+                  href="/register"
                   className="text-sm font-semibold"
                   onClick={handleNavbarClose}
                 >
@@ -232,7 +215,7 @@ const Navbar: FC = () => {
                   className="rounded-full"
                   size="lg"
                 >
-                  <Link href={"/login"} onClick={handleNavbarClose}>
+                  <Link href="/login" onClick={handleNavbarClose}>
                     Login
                   </Link>
                 </CustomButton>

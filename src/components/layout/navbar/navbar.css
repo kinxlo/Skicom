@@ -1,7 +1,6 @@
 .navbar {
   background-color: #fff;
   padding: 10px 20px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .nav-list {
@@ -39,14 +38,4 @@
   position: absolute;
   bottom: 7px;
   left: 0;
-}
-
-/* navbar.css */
-.blur-effect {
-  backdrop-filter: blur(8px);
-  transition: backdrop-filter 0.3s ease;
-}
-
-.navbar-container {
-  transition: backdrop-filter 0.3s ease;
 }
