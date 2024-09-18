@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 
+import { SessionProvider } from "next-auth/react";
+
 import LenisProvider from "~/components/lenis-provider";
 import GotoTop from "~/components/miscellaneous/goto-top";
 import Progress_Bar from "~/components/progress-bar";
@@ -15,7 +17,7 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -23,14 +25,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <GotoTop />
-        <LenisProvider>
-          <main>
-            <Progress_Bar />
-            {children}
-            <Toaster />
-          </main>
-        </LenisProvider>
+        <SessionProvider session={undefined}>
+          <GotoTop />
+          <LenisProvider>
+            <main>
+              <Progress_Bar />
+              {children}
+              <Toaster />
+            </main>
+          </LenisProvider>
+        </SessionProvider>
       </body>
     </html>
   );

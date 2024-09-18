@@ -48,3 +48,5 @@ export const config = {
   // eslint-disable-next-line unicorn/prefer-string-raw
   matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
 };
+
+export { auth as middleware } from "~/auth";

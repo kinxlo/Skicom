@@ -13,6 +13,7 @@ import Logo from "../../../../public/images/logo/skicom.png";
 import "./navbar.css";
 
 import { Search } from "lucide-react";
+import { signOut, useSession } from "next-auth/react";
 
 const menuVariant = {
   initial: {
@@ -45,6 +46,8 @@ const Navbar: FC = () => {
   const [isOpen, setOpen] = useState(false);
   const [isBlurred, setIsBlurred] = useState(false);
   const router = usePathname();
+
+  const { data: session } = useSession();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -119,24 +122,35 @@ const Navbar: FC = () => {
           </ul>
         </section>
 
-        <section className="hidden items-center gap-5 xl:flex">
-          <button className="rounded-full border border-black p-1.5">
-            <Search size={20} />
-          </button>
-
-          <Link href="/register" className="text-sm font-semibold">
-            Sign Up
-          </Link>
-
+        {session ? (
           <CustomButton
-            href="/login"
             variant="primary"
-            className="h-[46px] rounded-full"
-            size="lg"
+            className="hidden h-[46px] rounded-full xl:block"
+            size="sm"
+            onClick={() => signOut({ callbackUrl: "/" })}
           >
-            Login
+            Sign out
           </CustomButton>
-        </section>
+        ) : (
+          <section className="hidden items-center gap-5 xl:flex">
+            <button className="rounded-full border border-black p-1.5">
+              <Search size={20} />
+            </button>
+
+            <Link href="/register" className="text-sm font-semibold">
+              Sign Up
+            </Link>
+
+            <CustomButton
+              href="/login"
+              variant="primary"
+              className="h-[46px] rounded-full"
+              size="lg"
+            >
+              Login
+            </CustomButton>
+          </section>
+        )}
 
         <section className="xl:hidden">
           <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
@@ -199,27 +213,40 @@ const Navbar: FC = () => {
                 <div onClick={handleNavbarClose}>Search</div>
               </li>
 
-              <li className="mr-4">
-                <Link
-                  href="/register"
-                  className="text-sm font-semibold"
-                  onClick={handleNavbarClose}
-                >
-                  Sign Up
-                </Link>
-              </li>
-
-              <li className="mr-4">
+              {session ? (
                 <CustomButton
                   variant="primary"
-                  className="rounded-full"
-                  size="lg"
+                  className="h-[46px] rounded-full xl:hidden"
+                  size="sm"
+                  onClick={() => signOut({ callbackUrl: "/" })}
                 >
-                  <Link href="/login" onClick={handleNavbarClose}>
-                    Login
-                  </Link>
+                  Sign out
                 </CustomButton>
-              </li>
+              ) : (
+                <div className="space-y-7 text-center">
+                  <li className="mr-4">
+                    <Link
+                      href="/register"
+                      className="text-sm font-semibold"
+                      onClick={handleNavbarClose}
+                    >
+                      Sign Up
+                    </Link>
+                  </li>
+
+                  <li className="mr-4">
+                    <CustomButton
+                      variant="primary"
+                      className="rounded-full"
+                      size="lg"
+                    >
+                      <Link href="/login" onClick={handleNavbarClose}>
+                        Login
+                      </Link>
+                    </CustomButton>
+                  </li>
+                </div>
+              )}
             </ul>
           </motion.section>
         )}
