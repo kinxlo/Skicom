@@ -3,6 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
+import { Share, SquarePlus } from "lucide-react"; // Assuming you're using Lucide React icons
 import { useEffect, useState } from "react";
 
 function InstallPrompt() {
@@ -34,18 +35,15 @@ function InstallPrompt() {
   }
 
   return (
-    <section className="fixed bottom-0 left-0 z-[999] flex w-full items-center justify-center bg-background p-4 text-center">
-      <p className="text-sm font-bold text-primary lg:text-lg">
-        Install App
-        {isIOS && (
-          <>
-            &nbsp;&#128073;
-            <span className="text-mid-danger lg:ml-5">
-              Tap the share button ⎋ and "Add to Home Screen" ➕
-            </span>
-          </>
-        )}
-      </p>
+    <section className="fixed bottom-0 left-0 z-[999] flex w-full items-center justify-center bg-background p-4">
+      {!isIOS && (
+        <p className="flex w-full items-center justify-center text-xs">
+          <span>Tap the share button</span>
+          <Share className="mx-1 inline text-primary" size={16} />
+          <span>and "Add to Home Screen"</span>
+          <SquarePlus className="mx-1 inline text-primary" size={16} />
+        </p>
+      )}
     </section>
   );
 }
