@@ -7,6 +7,7 @@ import LenisProvider from "~/components/lenis-provider";
 import GotoTop from "~/components/miscellaneous/goto-top";
 import Progress_Bar from "~/components/progress-bar";
 import { Toaster } from "~/components/ui/toaster";
+import InstallPrompt from "~/lib/pwa/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function RootLayout({
             <Toaster />
           </main>
         </LenisProvider>
+        <InstallPrompt />
       </body>
     </html>
   );

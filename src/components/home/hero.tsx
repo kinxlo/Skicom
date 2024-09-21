@@ -40,7 +40,7 @@ const Hero = () => {
             />
           </Link>
           <BlurImage
-            className="absolute bottom-0 right-0 hidden xl:block"
+            className="absolute bottom-0 right-0 xl:block"
             width={1440}
             height={800}
             src={`/images/home/Hero.png`}
