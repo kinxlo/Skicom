@@ -14,7 +14,7 @@ const Hero = () => {
             <h1 className="text-center text-[32px] font-bold leading-[44px] text-neutral-dark-1 lg:text-[56px] lg:leading-[78px] xl:text-left">
               Get Connected With Us & Stay Connected
             </h1>
-            <div className="flex w-full justify-center">
+            <div className="flex w-full justify-center xl:justify-start">
               <CustomButton
                 className="mt-8 h-[46px] w-[220px] rounded-full"
                 variant="primary"

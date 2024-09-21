@@ -22,17 +22,19 @@ const DataCard = ({ price, initialPrice, plan, packages }: cardProperties) => {
 
   return (
     <div
-      className={`card relative rounded-[2rem] bg-[url('/images/home/card-clip-bg.png')] ${pathName === "/services" ? "w-[300px]" : "w-[400px]"} p-[43px]`}
+      className={`card relative rounded-[1rem] bg-[url('/images/home/card-clip-bg.png')] bg-no-repeat ${pathName === "/services" ? "w-[300px]" : "w-[289px] xl:w-[400px]"} p-[20px] xl:p-[43px]`}
     >
       <div className="mt-3 flex items-center gap-4">
-        <p className="text-6xl font-semibold text-neutral-dark-1">#{price}</p>
-        <p className="text-3xl font-medium text-red-600 line-through">
+        <p className="text-[50px] font-semibold text-neutral-dark-1 xl:text-6xl">
+          #{price}
+        </p>
+        <p className="text-[24px] font-medium text-red-600 line-through xl:text-3xl">
           {initialPrice && "#"}
           {initialPrice}
         </p>
       </div>
 
-      <p className="my-3 mt-8 text-2xl font-bold text-neutral-dark-2 xl:text-4xl">
+      <p className="my-3 mt-8 text-[28px] font-bold text-neutral-dark-2 xl:text-[36px]">
         {plan}
       </p>
 
@@ -41,9 +43,11 @@ const DataCard = ({ price, initialPrice, plan, packages }: cardProperties) => {
       <ul className="mt-5 space-y-2.5">
         {packages.map((item) => (
           <li key={item.id}>
-            <div className="mt-5 flex items-center gap-2">
+            <div className="mt-[12px] flex items-center gap-2">
               <Image src={check} className="h-6 w-6" alt={""} />
-              <p className="text-[16px] text-gray-500">{item.data}</p>
+              <p className="text-[11px] text-gray-500 xl:text-[16px]">
+                {item.data}
+              </p>
             </div>
           </li>
         ))}

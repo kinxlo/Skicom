@@ -24,12 +24,12 @@ export const SectionOne = () => {
           <Banknote color="#007CC3" className="mt-10" size={45} />
 
           <div>
-            <h5 className="my-2 text-3xl font-semibold text-neutral-dark-2">
+            <h5 className="my-2 text-[25px] font-semibold text-neutral-dark-2 xl:text-[32px]">
               Affordable Rates
             </h5>
-            <p className="mt-4 max-w-[400px] text-xl">
+            <p className="mt-4 max-w-[400px] xl:text-[20px]">
               Lorem ipsum dolor sit amet ctetur. Lorem libero arcu ut ventis
-              feugiat lacus.{" "}
+              feugiat lacus.
             </p>
           </div>
         </div>
@@ -37,10 +37,10 @@ export const SectionOne = () => {
         <div className="relative flex h-[300px] w-full flex-col bg-[url('/images/about/hero.png')] bg-cover bg-no-repeat px-7">
           <Headphones color="white" className="mt-10" size={45} />
           <div>
-            <h5 className="my-2 text-3xl font-semibold text-white">
+            <h5 className="my-2 text-[25px] font-semibold text-white xl:text-[32px]">
               24/7 Support
             </h5>
-            <p className="mt-4 max-w-[400px] text-xl text-white">
+            <p className="mt-4 max-w-[400px] text-white xl:text-[20px]">
               Lorem ipsum dolor sit amet ctetur. Lorem libero arcu ut ventis
               feugiat lacus.{" "}
             </p>
@@ -58,10 +58,10 @@ export const SectionOne = () => {
         <div className="payment flex h-[300px] w-full flex-col rounded-br-xl rounded-tr-xl px-7">
           <Banknote color="#007CC3" className="mx-7 mt-10" size={45} />
           <div>
-            <h5 className="my-2 text-3xl font-semibold text-neutral-dark-2">
+            <h5 className="my-2 text-[25px] font-semibold text-neutral-dark-2 xl:text-[32px]">
               Secure Payments
             </h5>
-            <p className="mt-4 max-w-[400px] text-xl">
+            <p className="mt-4 max-w-[400px] xl:text-[20px]">
               Lorem ipsum dolor sit amet ctetur. Lorem libero arcu ut ventis
               feugiat lacus.{" "}
             </p>

@@ -69,10 +69,10 @@ const Testimonial = () => {
         <section className="my-9 xl:my-14">
           <section className="items-center gap-3 md:flex">
             <div className="flex-1">
-              <h1 className="text-2xl font-semibold text-[#292929]">
+              <h1 className="text-[17px] font-semibold text-[#292929] xl:text-2xl">
                 Our Testimonials
               </h1>
-              <p className="mt-2 text-3xl font-medium text-primary lg:text-5xl">
+              <p className="mt-2 text-[28px] font-medium text-primary lg:text-5xl">
                 What People Say About Us
               </p>
             </div>
@@ -105,21 +105,21 @@ const Testimonial = () => {
               />
 
               <div className="absolute right-0">
-                {<StarRating rating={selectedTestimonial.rating} />}{" "}
+                {<StarRating rating={selectedTestimonial.rating} />}
               </div>
 
               <section>
                 <div className="relative">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-[22px] font-semibold text-[#292929]">
+                    <h3 className="text-[16px] font-semibold text-[#292929] xl:text-[22px]">
                       {selectedTestimonial.name}
                     </h3>
                   </div>
 
-                  <p className="absolute left-0 mt-1 text-[16px] font-medium text-gray-500">
+                  <p className="absolute left-0 mt-1 text-[14px] font-medium text-gray-500 xl:text-[16px]">
                     {selectedTestimonial.position}
                   </p>
-                  <p className="mt-14 max-w-7xl text-start text-[14px] lg:text-xl">
+                  <p className="mt-14 max-w-7xl text-start text-[14px] leading-[23px] lg:text-xl">
                     {selectedTestimonial.message}
                   </p>
                 </div>
