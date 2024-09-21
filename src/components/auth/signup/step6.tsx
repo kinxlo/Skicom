@@ -1,6 +1,7 @@
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp";
 import { MoveLeft } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   Control,
   Controller,
@@ -37,9 +38,11 @@ export const Step6 = ({
   onSubmitSignIn,
   errors,
   isValid,
-  nextStep,
+  // nextStep,
   control,
 }: PreviousStepType) => {
+  const router = useRouter();
+
   return (
     <AuthWrapper>
       <div>
@@ -95,7 +98,8 @@ export const Step6 = ({
               className="w-full rounded-full py-5"
               variant="primary"
               isDisabled={!isValid}
-              onClick={nextStep}
+              // onClick={nextStep}
+              onClick={() => router.replace("/login")}
             >
               Continue
             </CustomButton>

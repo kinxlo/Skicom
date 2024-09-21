@@ -9,10 +9,12 @@ import { SubmitHandler, useForm } from "react-hook-form";
 
 import { Step1 } from "~/components/auth/signin/step1";
 import { Step2 } from "~/components/auth/signin/step2";
+import { useToast } from "~/components/ui/use-toast";
 import { Inputs } from "~/types/auth.types";
 
 const page = () => {
   const router = useRouter();
+  const { toast } = useToast();
   const {
     register,
     handleSubmit,
@@ -31,8 +33,6 @@ const page = () => {
   };
 
   const onSubmitSignIn: SubmitHandler<Inputs> = async (form) => {
-    console.log(form);
-
     try {
       const response = await signIn("credentials", {
         email: form.email,
@@ -41,12 +41,17 @@ const page = () => {
       });
 
       if (response?.error) {
+        // console.error("Sign-in error:", response);
+        toast({
+          title: "Error",
+          description: "An error occurred",
+        });
         return;
       }
 
       // console.log(response);
 
-      router.replace("/");
+      router.replace("/dashboard/user");
     } catch (error) {
       console.error("Sign-in error", error);
     }

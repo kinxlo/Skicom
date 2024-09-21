@@ -17,6 +17,7 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from "~/components/ui/input-otp";
+import useAuth from "~/store/authStore";
 import { SignupInputs } from "~/types/auth.types";
 
 type PreviousStepType = {
@@ -40,6 +41,8 @@ export const Step4 = ({
   // nextStep,
   control,
 }: PreviousStepType) => {
+  const { loading } = useAuth();
+
   return (
     <AuthWrapper>
       <div>
@@ -55,7 +58,7 @@ export const Step4 = ({
         <p className="pb-2 text-center text-[14px] text-[#6B6B6B]">
           Enter your 6 digit passcode
         </p>
-        <form action="" onSubmit={handleSubmit(onSubmitSignIn)}>
+        <form onSubmit={handleSubmit(onSubmitSignIn)}>
           <div className="flex flex-col items-center justify-center">
             <Controller
               name="passcode"
@@ -96,10 +99,10 @@ export const Step4 = ({
             <CustomButton
               className="w-full rounded-full py-5"
               variant="primary"
-              isDisabled={!isValid}
+              isDisabled={!isValid || loading}
               // onClick={nextStep}
             >
-              Continue
+              {loading ? "Submitting" : "Continue"}
             </CustomButton>
 
             <div className="mt-2">

@@ -127,7 +127,7 @@ const Navbar: FC = () => {
             variant="primary"
             className="hidden h-[46px] rounded-full xl:block"
             size="sm"
-            onClick={() => signOut({ callbackUrl: "/" })}
+            onClick={() => signOut({ callbackUrl: "/login" })}
           >
             Sign out
           </CustomButton>
@@ -218,7 +218,7 @@ const Navbar: FC = () => {
                   variant="primary"
                   className="h-[46px] rounded-full xl:hidden"
                   size="sm"
-                  onClick={() => signOut({ callbackUrl: "/" })}
+                  onClick={() => signOut({ callbackUrl: "/login" })}
                 >
                   Sign out
                 </CustomButton>

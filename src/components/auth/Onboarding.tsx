@@ -16,8 +16,8 @@ export const Onboarding = () => {
         <BlurImage
           src={"/images/auth/onboardImage.png"}
           className="mx-auto h-[315px] w-[324px]"
-          width={45}
-          height={45}
+          width={315}
+          height={324}
           alt="Onboarding-image"
         />
       </div>

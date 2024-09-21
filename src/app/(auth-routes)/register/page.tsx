@@ -12,6 +12,8 @@ import { Step3 } from "~/components/auth/signup/step3";
 import { Step4 } from "~/components/auth/signup/step4";
 import { Step5Success } from "~/components/auth/signup/step5-success";
 import { Step6 } from "~/components/auth/signup/step6";
+import { useToast } from "~/components/ui/use-toast";
+import useAuth from "~/store/authStore";
 import { SignupInputs } from "~/types/auth.types";
 
 const page = () => {
@@ -24,6 +26,9 @@ const page = () => {
   // const { status, data: session } = useSession();
   const [currentStep, setCurrentStep] = useState<number>(1);
   const [value, setValue] = useState<string | undefined>();
+  const { toast } = useToast();
+
+  const { setLoading } = useAuth();
 
   const nextStep = () => {
     setCurrentStep(currentStep + 1);
@@ -35,28 +40,39 @@ const page = () => {
 
   const handleRegister: SubmitHandler<SignupInputs> = async (form) => {
     try {
-      const response = await axios.post(
-        "https://curaflux-server.onrender.com/auth/signup",
-        {
-          phoneNumber: value,
-          password: form.passcode,
-          verifyPhoneNumber: form.verifyPhoneNumber,
-          firstName: form.firstName,
-          lastName: form.lastName,
-          email: form.email,
-          passcode: form.passcode,
-          transcationPin: form.transcationPin,
-        },
-      );
-      console.log(response);
+      setLoading(true);
+      const response = await axios.post("/api/auth/register", {
+        phoneNumber: value,
+        password: form.passcode,
+        verifyPhoneNumber: form.verifyPhoneNumber,
+        firstName: form.firstName,
+        lastName: form.lastName,
+        email: form.email,
+        passcode: form.passcode,
+        transcationPin: form.transcationPin,
+      });
+
+      // console.log(response);
 
       if (response.status === 201) {
         nextStep();
       }
-
-      // router.replace("/");
+      setLoading(false);
     } catch (error) {
-      console.log(error);
+      if (axios.isAxiosError(error)) {
+        toast({
+          title: "Error",
+          description:
+            error.response?.data?.error || "An unexpected error occurred",
+        });
+      } else {
+        console.error("Unexpected error:", error);
+        toast({
+          title: "Error",
+          description: "An unexpected error occurred",
+        });
+      }
+      // console.log(error?.response.data?.error);
     }
   };
 
