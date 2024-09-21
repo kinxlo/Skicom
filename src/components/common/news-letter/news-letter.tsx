@@ -16,11 +16,11 @@ const NewsLetter = () => {
         />
       </section>
 
-      <section>
-        <p className="text-center text-3xl font-medium text-white">
+      <section className="mb-4">
+        <p className="mb-4 text-center text-[28px] font-medium text-white lg:text-[44px]">
           Subscribe to our newsletter
         </p>
-        <div className="mt-7">
+        <div className="mt-3 lg:mt-7">
           <form
             action=""
             className="items-center justify-center gap-3 px-4 xl:flex"
@@ -33,7 +33,7 @@ const NewsLetter = () => {
 
             <div className="text-center">
               <CustomButton
-                className="mt-3 rounded-full bg-neutral-dark-1 text-background xl:mt-0"
+                className="mt-3 w-[178px] rounded-full bg-neutral-dark-1 text-background xl:mt-0"
                 size="lg"
               >
                 Subscribe

@@ -41,7 +41,7 @@ export function particlesCanvas(canvasElement: HTMLCanvasElement) {
       this.x = Math.floor(x);
       this.y = Math.floor(y);
       this.ctx = effect.ctx;
-      this.ctx.fillStyle = "#f97415";
+      this.ctx.fillStyle = "#000000";
       this.vx = 0;
       this.vy = 0;
       this.ease = 0.05;

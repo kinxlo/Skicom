@@ -11,6 +11,8 @@ import Logo from "../../../../public/images/logo/skicom.png";
 
 import "./navbar.css";
 
+import { Search } from "lucide-react";
+
 const menuVariant = {
   initial: {
     y: -300,
@@ -49,7 +51,7 @@ const Navbar: FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 5) {
         setIsBlurred(true);
       } else {
         setIsBlurred(false);
@@ -60,13 +62,17 @@ const Navbar: FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavbarClose = () => {
+    setOpen(false);
+  };
+
   return (
-    <main className="">
+    <nav>
       <section
-        className={`navbar-container fixed left-0 right-0 z-10 mx-auto flex h-[65px] items-center justify-between bg-white px-5 shadow-md 2xl:container xl:mx-auto ${isBlurred ? "xl:mt-0" : "duration-300 xl:mt-5"} xl:w-11/12 xl:rounded-full`}
+        className={`fixed left-0 right-0 z-20 mx-auto flex h-[95px] items-center justify-between bg-white px-5 shadow-md xl:mx-auto ${isBlurred ? "xl:mt-0" : "duration-300 xl:mt-5"} md:max-w-[1240px] xl:rounded-full`}
       >
         <section>
-          <Link href={"/"}>
+          <Link href={"/"} onClick={handleNavbarClose}>
             <Image src={Logo} alt={"Skicom-logo"} height={50} />
           </Link>
         </section>
@@ -86,16 +92,16 @@ const Navbar: FC = () => {
             </li>
             <li>
               <Link
-                href={"/"}
-                className={`nav-item ${active === "about" ? "active" : ""} ${active === "about" ? "text-[#007CC3]" : ""}`}
-                onClick={() => handleClick("about")}
+                href={"/about"}
+                className={`nav-item ${active === "/about" ? "active" : ""} ${active === "/about" ? "text-[#007CC3]" : ""}`}
+                onClick={() => handleClick("/about")}
               >
                 About Us
               </Link>
             </li>
             <li>
               <Link
-                href={"/"}
+                href={"/services"}
                 className={`nav-item ${active === "services" ? "active" : ""} ${active === "services" ? "text-[#007CC3]" : ""}`}
                 onClick={() => handleClick("services")}
               >
@@ -113,7 +119,7 @@ const Navbar: FC = () => {
             </li>
             <li>
               <Link
-                href={"/"}
+                href={"/contact"}
                 className={`nav-item ${active === "contact" ? "active" : ""} ${active === "contact" ? "text-[#007CC3]" : ""}`}
                 onClick={() => handleClick("contact")}
               >
@@ -124,14 +130,21 @@ const Navbar: FC = () => {
         </section>
 
         <section className="hidden items-center gap-5 xl:flex">
-          <div>SearchBar</div>
+          <button className="rounded-full border border-black p-1.5">
+            <Search size={20} />
+          </button>
 
           <Link href={"/register"} className="text-sm font-semibold">
             Sign Up
           </Link>
 
-          <CustomButton variant="primary" className="rounded-full" size="lg">
-            <Link href={"/login"}>Login</Link>
+          <CustomButton
+            href={`/login`}
+            variant="primary"
+            className="h-[46px] rounded-full"
+            size="lg"
+          >
+            Login
           </CustomButton>
         </section>
 
@@ -144,7 +157,7 @@ const Navbar: FC = () => {
         {isOpen && (
           // mobile navbar
           <motion.section
-            className="navbar fixed z-10 mt-16 w-full shadow-md xl:hidden"
+            className="navbar fixed z-20 mt-16 w-full shadow-md xl:hidden"
             variants={menuVariant}
             initial="initial"
             animate="animate"
@@ -153,7 +166,7 @@ const Navbar: FC = () => {
             <ul
               className={`nav-list flex flex-col items-center gap-7 text-sm font-semibold`}
             >
-              <li>
+              <li onClick={handleNavbarClose}>
                 <Link
                   href={"/"}
                   className={`nav-item ${active === "/" ? "active" : ""} ${active === "/" ? "text-[#007CC3]" : ""}`}
@@ -162,25 +175,25 @@ const Navbar: FC = () => {
                   Home
                 </Link>
               </li>
-              <li>
+              <li onClick={handleNavbarClose}>
                 <Link
-                  href={"/"}
-                  className={`nav-item ${active === "about" ? "active" : ""} ${active === "about" ? "text-[#007CC3]" : ""}`}
-                  onClick={() => handleClick("about")}
+                  href={"/about"}
+                  className={`nav-item ${active === "/about" ? "active" : ""} ${active === "/about" ? "text-[#007CC3]" : ""}`}
+                  onClick={() => handleClick("/about")}
                 >
                   About Us
                 </Link>
               </li>
-              <li>
+              <li onClick={handleNavbarClose}>
                 <Link
-                  href={"/"}
+                  href={"/services"}
                   className={`nav-item ${active === "services" ? "active" : ""} ${active === "services" ? "text-[#007CC3]" : ""}`}
                   onClick={() => handleClick("services")}
                 >
                   Services
                 </Link>
               </li>
-              <li>
+              <li onClick={handleNavbarClose}>
                 <Link
                   href={"/"}
                   className={`nav-item ${active === "stores" ? "active" : ""} ${active === "stores" ? "text-[#007CC3]" : ""}`}
@@ -189,9 +202,9 @@ const Navbar: FC = () => {
                   Stores
                 </Link>
               </li>
-              <li>
+              <li onClick={handleNavbarClose}>
                 <Link
-                  href={"/"}
+                  href={"/contact"}
                   className={`nav-item ${active === "contact" ? "active" : ""} ${active === "contact" ? "text-[#007CC3]" : ""}`}
                   onClick={() => handleClick("contact")}
                 >
@@ -200,11 +213,15 @@ const Navbar: FC = () => {
               </li>
 
               <li className="mr-4">
-                <div>SearchBar</div>
+                <div onClick={handleNavbarClose}>Search</div>
               </li>
 
               <li className="mr-4">
-                <Link href={"/register"} className="text-sm font-semibold">
+                <Link
+                  href={"/register"}
+                  className="text-sm font-semibold"
+                  onClick={handleNavbarClose}
+                >
                   Sign Up
                 </Link>
               </li>
@@ -215,14 +232,16 @@ const Navbar: FC = () => {
                   className="rounded-full"
                   size="lg"
                 >
-                  <Link href={"/login"}>Login</Link>
+                  <Link href={"/login"} onClick={handleNavbarClose}>
+                    Login
+                  </Link>
                 </CustomButton>
               </li>
             </ul>
           </motion.section>
         )}
       </AnimatePresence>
-    </main>
+    </nav>
   );
 };
 

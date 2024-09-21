@@ -7,10 +7,10 @@ export default function LandingLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex min-h-screen w-full flex-col justify-between">
+    <section>
       <Navbar />
-      <div className="mx-auto mt-[95px] w-11/12 2xl:container">{children}</div>
+      <div>{children}</div>
       <Footer />
-    </div>
+    </section>
   );
 }

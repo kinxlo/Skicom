@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
+import BlurImage from "~/components/miscellaneous/blur-image";
 import StarRating from "~/lib/rating/star";
 import four from "../../../../public/images/testimonials/four.png";
 import message from "../../../../public/images/testimonials/msg.png";
@@ -64,58 +64,69 @@ const Testimonial = () => {
   const selectedTestimonial = testimonialImages[selectedTestimonialIndex];
 
   return (
-    <main className="my-9 xl:my-14">
-      <section className="items-center gap-3 md:flex">
-        <div className="flex-1">
-          <h1 className="text-lg font-semibold">Our Testimonials</h1>
-          <p className="mt-2 text-3xl text-primary">What People Say About Us</p>
-        </div>
-        {testimonialImages.map((t, index) => (
-          <section key={t.id} className="">
-            {/* <div className="">
-              <h1 className="text-lg font-semibold">{t.text}</h1>
-              <p className="text-3xl text-primary">{t.subText}</p>
-            </div> */}
-            <div>
-              {t.image && (
-                <div className="hidden md:block">
-                  <Image
-                    src={t.image}
-                    className={`h-12 w-12 cursor-pointer ${selectedTestimonial.id === index && "rounded-full border-2 border-primary duration-200"}`}
-                    alt={t.name}
-                    onClick={() => handleImageClick(index)}
-                  />
-                </div>
-              )}
-            </div>
-          </section>
-        ))}
-      </section>
-
+    <main className="">
       <section>
-        <div className="my-7 h-[1px] w-full bg-[#CECECE]" />
+        <section className="my-9 xl:my-14">
+          <section className="items-center gap-3 md:flex">
+            <div className="flex-1">
+              <h1 className="text-2xl font-semibold text-[#292929]">
+                Our Testimonials
+              </h1>
+              <p className="mt-2 text-3xl font-medium text-primary lg:text-5xl">
+                What People Say About Us
+              </p>
+            </div>
+            {testimonialImages.map((t, index) => (
+              <section key={t.id} className="">
+                <div>
+                  {t.image && (
+                    <div className="hidden md:block">
+                      <BlurImage
+                        src={t.image}
+                        className={`h-20 w-20 cursor-pointer ${selectedTestimonial.id === index && "rounded-full border-2 border-primary duration-200"}`}
+                        alt={t.name}
+                        onClick={() => handleImageClick(index)}
+                      />
+                    </div>
+                  )}
+                </div>
+              </section>
+            ))}
+          </section>
 
-        <div className="gap-10 xl:flex">
-          <Image
-            src={message}
-            className="hidden h-[110px] w-[240px] object-cover xl:block"
-            alt={""}
-          />
+          <section className="relative">
+            <div className="my-7 h-[1px] w-full bg-[#CECECE]" />
 
-          <section>
-            <div className="">
-              <div className="flex items-center justify-between">
-                <h3 className="font-bold">{selectedTestimonial.name}</h3>
-                <div>{<StarRating rating={selectedTestimonial.rating} />} </div>
+            <div className="gap-10 xl:flex">
+              <BlurImage
+                src={message}
+                className="hidden h-[200px] w-[270px] object-cover xl:block"
+                alt={""}
+              />
+
+              <div className="absolute right-0">
+                {<StarRating rating={selectedTestimonial.rating} />}{" "}
               </div>
 
-              <p className="my-1.5 text-xs font-medium text-gray-500">
-                {selectedTestimonial.position}
-              </p>
-              <p className="mt-5 text-sm">{selectedTestimonial.message}</p>
+              <section>
+                <div className="relative">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-[22px] font-semibold text-[#292929]">
+                      {selectedTestimonial.name}
+                    </h3>
+                  </div>
+
+                  <p className="absolute left-0 mt-1 text-[16px] font-medium text-gray-500">
+                    {selectedTestimonial.position}
+                  </p>
+                  <p className="mt-14 max-w-7xl text-start text-[14px] lg:text-xl">
+                    {selectedTestimonial.message}
+                  </p>
+                </div>
+              </section>
             </div>
           </section>
-        </div>
+        </section>
       </section>
     </main>
   );
