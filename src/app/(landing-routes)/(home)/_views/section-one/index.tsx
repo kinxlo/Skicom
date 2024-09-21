@@ -6,17 +6,17 @@ import BlurImage from "~/components/miscellaneous/blur-image";
 export const SectionOne = () => {
   return (
     <Wrapper className="py-[87px] text-center">
-      <p className="mx-auto w-fit text-[27px] font-semibold text-neutral-dark-2">
+      <p className="mx-auto w-fit font-semibold text-neutral-dark-2 xl:text-[27px]">
         Welcome to SKICOM
       </p>
 
-      <h2 className="mx-auto my-[25px] w-fit text-2xl font-semibold text-neutral-dark-1 lg:max-w-full lg:text-[44px]">
+      <h2 className="mx-auto my-[25px] w-fit text-[28px] font-semibold text-neutral-dark-1 lg:max-w-full lg:text-[44px]">
         A Single Sign-in To Your Digital World
       </h2>
-      <p className="mx-auto max-w-[700px] text-lg font-medium lg:text-xl">
+      <p className="mx-auto max-w-[700px] text-[13px] font-medium lg:text-xl">
         Lorem ipsum dolor sit amet consectetur. Lorem libero arcu ut venenatis
         feugiat lacus. Elit tellus morbi quis a aliquam mi pretium nam donec.
-        Duis posuere venenatis et amet sed.{" "}
+        Duis posuere venenatis et amet sed.
       </p>
 
       <section className="mt-10 items-center justify-center text-start lg:flex">
