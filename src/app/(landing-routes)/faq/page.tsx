@@ -59,7 +59,7 @@ const Faq = () => {
             </div>
           </div>
 
-          <Wrapper className="mt-7 min-h-[354px] rounded-lg bg-[#fff] py-6 text-center lg:mt-14">
+          <Wrapper className="mt-7 min-h-[354px] rounded-lg bg-[#fff] py-[40px] text-center lg:mt-14">
             <BlurImage
               src={teamImage}
               alt="team-image"
@@ -95,7 +95,7 @@ const Faq = () => {
               <div className="text-center">
                 <CustomButton
                   className="mt-4 h-[40px] w-[170px] rounded-full border border-primary bg-transparent text-sm text-primary lg:mt-0"
-                  href="/articles"
+                  href="/blog"
                 >
                   View All Articles
                 </CustomButton>

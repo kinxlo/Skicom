@@ -21,7 +21,7 @@ const Paginations: React.FC<PaginationsProperties> = ({
   onPageChange,
 }) => {
   const handlePageChange = (page: number, event: React.MouseEvent) => {
-    event.preventDefault(); // Prevent default anchor behavior
+    event.preventDefault();
     onPageChange(page);
   };
 
@@ -33,7 +33,10 @@ const Paginations: React.FC<PaginationsProperties> = ({
             <PaginationPrevious
               href="#"
               size={"default"}
-              onClick={(e) => handlePageChange(Math.max(currentPage - 1, 1), e)}
+              onClick={(e) => {
+                e.preventDefault();
+                handlePageChange(Math.max(currentPage - 1, 1), e);
+              }}
               // disabled={currentPage === 1}
             />
           </PaginationItem>
@@ -57,9 +60,10 @@ const Paginations: React.FC<PaginationsProperties> = ({
             <PaginationNext
               href="#"
               size={"default"}
-              onClick={(e) =>
-                handlePageChange(Math.min(currentPage + 1, totalPages), e)
-              }
+              onClick={(e) => {
+                e.preventDefault();
+                handlePageChange(Math.min(currentPage + 1, totalPages), e);
+              }}
               // disabled={currentPage === totalPages}
             />
           </PaginationItem>
