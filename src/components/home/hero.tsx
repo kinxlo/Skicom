@@ -46,6 +46,7 @@ const Hero = () => {
           </h1>
           <div className="flex w-full justify-center xl:justify-start">
             <CustomButton
+              href={`/register`}
               className="mt-8 h-[46px] w-[220px] rounded-full"
               variant="primary"
             >

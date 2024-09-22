@@ -1,6 +1,5 @@
 "use client";
 
-// import "./data-card.css";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -22,7 +21,7 @@ const DataCard = ({ price, initialPrice, plan, packages }: cardProperties) => {
 
   return (
     <div
-      className={`card relative rounded-[1rem] bg-[url('/images/home/card-clip-bg.png')] bg-no-repeat ${pathName === "/services" ? "w-[293px] p-[20px] xl:p-[19px]" : "w-[289px] p-[20px] xl:w-[400px] xl:p-[43px]"}`}
+      className={`card relative transform rounded-[1rem] bg-[url('/images/home/card-clip-bg.png')] bg-no-repeat transition-transform duration-300 hover:scale-105 ${pathName === "/services" ? "w-[293px] p-[20px] xl:p-[19px]" : "w-[289px] p-[20px] xl:w-[400px] xl:p-[43px]"}`}
     >
       <div className="mt-3 flex items-center gap-4">
         <p

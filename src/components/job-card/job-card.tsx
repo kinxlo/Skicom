@@ -22,7 +22,7 @@ const JobCard = ({
   opening,
 }: jobProperties) => {
   return (
-    <main className="my-3 min-h-[460px] max-w-[263px] rounded-[27px] bg-default p-[18px] lg:max-w-[400px] lg:p-[28px]">
+    <main className="my-3 min-h-[460px] max-w-[263px] transform rounded-[27px] bg-default p-[18px] transition-transform duration-300 hover:scale-105 lg:max-w-[400px] lg:p-[28px]">
       <h3 className="text-[19px] font-medium text-neutral-dark-1 xl:text-[30px]">
         {position}
       </h3>
@@ -43,7 +43,7 @@ const JobCard = ({
             <div className="flex gap-2 lg:pr-[25px]">
               <Image
                 src={check}
-                className="w-[15px h-[15px] xl:h-[24px] xl:w-[24px]"
+                className="h-[15px] w-[15px] xl:h-[24px] xl:w-[24px]"
                 alt={"check"}
               />
               <p className="text-[12px] text-gray-500 xl:text-[16px]">
@@ -58,7 +58,6 @@ const JobCard = ({
         >
           Apply Now{" "}
           <span>
-            {" "}
             <ChevronRight size={16} />
           </span>
         </CustomButton>
