@@ -99,6 +99,10 @@ const CustomButton: FC<ButtonProperties> = ({
     </>
   );
 
+  const buttonClasses = `transition-transform duration-300 ease-in-out ${
+    isDisabled ? "opacity-50 cursor-not-allowed" : "hover:scale-105"
+  } ${className}`;
+
   if (href) {
     const isExternal = /^https?:\/\//.test(href);
 
@@ -116,7 +120,7 @@ const CustomButton: FC<ButtonProperties> = ({
             size={size}
             disabled={isDisabled}
             aria-label={ariaLabel}
-            className={className}
+            className={buttonClasses}
             onClick={onClick}
             role="button"
           >
@@ -133,7 +137,7 @@ const CustomButton: FC<ButtonProperties> = ({
           size={size}
           disabled={isDisabled}
           aria-label={ariaLabel}
-          className={className}
+          className={buttonClasses}
           onClick={onClick}
           role="button"
         >
@@ -144,19 +148,17 @@ const CustomButton: FC<ButtonProperties> = ({
   }
 
   return (
-    <>
-      <Button
-        variant={variant}
-        size={size}
-        disabled={isDisabled}
-        aria-label={ariaLabel}
-        className={className}
-        onClick={onClick}
-        role="button"
-      >
-        {buttonContent}
-      </Button>
-    </>
+    <Button
+      variant={variant}
+      size={size}
+      disabled={isDisabled}
+      aria-label={ariaLabel}
+      className={buttonClasses}
+      onClick={onClick}
+      role="button"
+    >
+      {buttonContent}
+    </Button>
   );
 };
 

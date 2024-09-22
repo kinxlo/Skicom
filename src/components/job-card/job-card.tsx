@@ -55,8 +55,9 @@ const JobCard = ({
         <CustomButton
           variant="primary"
           className="h-12 w-full rounded-full text-[16px]"
+          href={`/jobs`}
         >
-          Apply Now{" "}
+          Apply Now
           <span>
             <ChevronRight size={16} />
           </span>
