@@ -1,51 +1,67 @@
+import React from "react";
+
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
 } from "~/components/ui/pagination";
 
-const Paginations = () => {
+interface PaginationsProperties {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}
+
+const Paginations: React.FC<PaginationsProperties> = ({
+  currentPage,
+  totalPages,
+  onPageChange,
+}) => {
+  const handlePageChange = (page: number, event: React.MouseEvent) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    onPageChange(page);
+  };
+
   return (
     <div>
       <Pagination className="w-[300px]">
         <PaginationContent>
           <PaginationItem>
-            <PaginationPrevious href="#" size={"default"} />
+            <PaginationPrevious
+              href="#"
+              size={"default"}
+              onClick={(e) => handlePageChange(Math.max(currentPage - 1, 1), e)}
+              // disabled={currentPage === 1}
+            />
           </PaginationItem>
+
+          {Array.from({ length: totalPages }, (_, index) => (
+            <PaginationItem key={index + 1}>
+              <PaginationLink
+                href="#"
+                size={"default"}
+                onClick={(e) => handlePageChange(index + 1, e)}
+                className={`${
+                  currentPage === index + 1 ? "bg-primary text-white" : ""
+                }`}
+              >
+                {index + 1}
+              </PaginationLink>
+            </PaginationItem>
+          ))}
+
           <PaginationItem>
-            <PaginationLink href="#" size={"default"}>
-              1
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#" size={"default"}>
-              2
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#" size={"default"}>
-              3
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#" size={"default"}>
-              4
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#" size={"default"}>
-              5
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationEllipsis />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationNext href="#" size={"default"} />
+            <PaginationNext
+              href="#"
+              size={"default"}
+              onClick={(e) =>
+                handlePageChange(Math.min(currentPage + 1, totalPages), e)
+              }
+              // disabled={currentPage === totalPages}
+            />
           </PaginationItem>
         </PaginationContent>
       </Pagination>

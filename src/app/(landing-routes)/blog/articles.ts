@@ -1,8 +1,3 @@
-import { ChevronLeft } from "lucide-react";
-import Link from "next/link";
-
-import ArticlesCard from "~/components/common/articles-card/articles-card";
-import { Wrapper } from "~/components/layout/wrapper";
 import one from "../../../../public/images/customer-care/1.png";
 import two from "../../../../public/images/customer-care/2.png";
 import three from "../../../../public/images/customer-care/3.png";
@@ -12,7 +7,7 @@ import six from "../../../../public/images/customer-care/6.png";
 import seven from "../../../../public/images/customer-care/7.png";
 import eight from "../../../../public/images/customer-care/8.png";
 
-const article = [
+export const articles = [
   {
     id: 1,
     articleImage: one,
@@ -77,50 +72,68 @@ const article = [
     subHeading:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.....",
   },
+  {
+    id: 9,
+    articleImage: one,
+    heading: "Getting Started on SKICOM",
+    dateSent: "3 Days Ago",
+    subHeading:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.....",
+  },
+  {
+    id: 10,
+    articleImage: two,
+    heading: "Getting Started on SKICOM",
+    dateSent: "3 Days Ago",
+    subHeading:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.....",
+  },
+  {
+    id: 11,
+    articleImage: three,
+    heading: "Getting Started on SKICOM",
+    dateSent: "3 Days Ago",
+    subHeading:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.....",
+  },
+  {
+    id: 12,
+    articleImage: four,
+    heading: "Getting Started on SKICOM",
+    dateSent: "3 Days Ago",
+    subHeading:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.....",
+  },
+  {
+    id: 13,
+    articleImage: five,
+    heading: "Getting Started on SKICOM",
+    dateSent: "3 Days Ago",
+    subHeading:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.....",
+  },
+  {
+    id: 14,
+    articleImage: six,
+    heading: "Getting Started on SKICOM",
+    dateSent: "3 Days Ago",
+    subHeading:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.....",
+  },
+  {
+    id: 15,
+    articleImage: seven,
+    heading: "Getting Started on SKICOM",
+    dateSent: "3 Days Ago",
+    subHeading:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.....",
+  },
+  {
+    id: 16,
+    articleImage: eight,
+    heading: "Getting Started on SKICOM",
+    dateSent: "3 Days Ago",
+    subHeading:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.....",
+  },
 ];
-
-const Articles = () => {
-  return (
-    <main className="bg-[#F6F6F6]">
-      <Wrapper className="pt-32 lg:pt-40">
-        <Link
-          href={"customer-care"}
-          className="flex items-center gap-3 text-xl font-medium text-primary"
-        >
-          {" "}
-          <span>
-            <ChevronLeft size={20} />
-          </span>{" "}
-          Back to Customer Care
-        </Link>
-
-        <div className="mt-10 lg:mt-7">
-          <h2 className="text-4xl font-semibold text-neutral-dark-1">
-            All Articles
-          </h2>
-          <p className="mt-2 text-lg">
-            Read everything you need to know about our products and services.
-          </p>
-        </div>
-
-        <section>
-          <div className="mt-8 grid w-full grid-cols-1 gap-7 lg:grid-cols-2">
-            {article.map((a) => (
-              <ArticlesCard
-                key={a.id}
-                articleImage={a.articleImage}
-                heading={a.heading}
-                dateSent={a.dateSent}
-                subHeading={a.subHeading}
-              />
-            ))}
-          </div>
-
-          <div className="mt-7 text-center text-sm">Pagination</div>
-        </section>
-      </Wrapper>
-    </main>
-  );
-};
-
-export default Articles;

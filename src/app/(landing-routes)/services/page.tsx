@@ -14,12 +14,14 @@ import speed from "../../../../public/images/services/speed.png";
 const Page = () => {
   return (
     <main>
-      <div className="h-[350px] w-full bg-[url('/images/about/hero.png')] bg-cover bg-no-repeat pt-48 lg:h-[400px]">
-        <h3 className="text-center text-[32px] font-semibold text-white lg:text-[56px]">
-          Services
-        </h3>
+      <div className="flex h-[350px] w-full items-center justify-center bg-[url('/images/services/hero.png')] bg-center bg-no-repeat lg:h-[510px] xl:bg-cover">
+        <div className="mt-[100px] lg:mt-0">
+          <h3 className="text-center text-[32px] font-semibold text-white lg:text-[56px]">
+            Services
+          </h3>
 
-        <BreadCrumb />
+          <BreadCrumb />
+        </div>
       </div>
 
       <section className="relative bg-[#FFFFFF]">

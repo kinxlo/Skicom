@@ -15,7 +15,7 @@ const Particles404 = () => {
     }, 500);
   }, [winWidth]);
   return (
-    <div className="absolute left-0 top-0 mx-auto h-full w-full max-w-[1440px] overflow-hidden">
+    <div className="h-full w-full overflow-hidden">
       <canvas
         ref={canvaReference}
         id="particles_404"
@@ -26,9 +26,9 @@ const Particles404 = () => {
           className=""
           // @ts-expect-error Hacking the type
           onMouseEnter={handleMouseEnter}
-          data-value="SKYCOM INC."
+          data-value="SKICOM INC."
         >
-          SkyCom Inc.
+          SkiCom Inc.
         </h1>
       </header>
       <div className="absolute bottom-10 left-10 font-sans text-2xl uppercase">
