@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Dialog, DialogContent } from "~/components/ui/dialog";
+import { Dialog } from "~/components/ui/dialog";
 
 interface DialogDemoProperties {
   open: boolean;

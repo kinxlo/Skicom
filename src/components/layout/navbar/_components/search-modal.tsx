@@ -1,5 +1,5 @@
 import { CircleX, Search } from "lucide-react"; // Importing the X icon
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { DialogDemo } from "~/components/common/Dialog";
 import { DialogContent } from "~/components/ui/dialog";

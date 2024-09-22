@@ -33,9 +33,9 @@ const Paginations: React.FC<PaginationsProperties> = ({
             <PaginationPrevious
               href="#"
               size={"default"}
-              onClick={(e) => {
-                e.preventDefault();
-                handlePageChange(Math.max(currentPage - 1, 1), e);
+              onClick={(event) => {
+                event.preventDefault();
+                handlePageChange(Math.max(currentPage - 1, 1), event);
               }}
               // disabled={currentPage === 1}
             />
@@ -60,9 +60,9 @@ const Paginations: React.FC<PaginationsProperties> = ({
             <PaginationNext
               href="#"
               size={"default"}
-              onClick={(e) => {
-                e.preventDefault();
-                handlePageChange(Math.min(currentPage + 1, totalPages), e);
+              onClick={(event) => {
+                event.preventDefault();
+                handlePageChange(Math.min(currentPage + 1, totalPages), event);
               }}
               // disabled={currentPage === totalPages}
             />
