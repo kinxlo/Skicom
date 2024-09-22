@@ -109,7 +109,10 @@ const Offers = () => {
             </div>
 
             <div>
-              <CustomButton className="h-[44px] w-[180px] rounded-full text-primary">
+              <CustomButton
+                href={`/services`}
+                className="h-[44px] w-[180px] rounded-full text-primary"
+              >
                 View All Plans
               </CustomButton>
             </div>
