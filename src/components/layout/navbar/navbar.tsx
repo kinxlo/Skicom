@@ -2,16 +2,17 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
-import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Import usePathname
+import { usePathname } from "next/navigation";
 import { FC, useEffect, useState } from "react";
 
 import CustomButton from "~/components/common/common-button/common-button";
 import Logo from "../../../../public/images/logo/skicom.png";
 
 import "./navbar.css";
+
+import { SearchDialog } from "./_components/search-modal";
 
 const menuVariant = {
   initial: {
@@ -32,17 +33,15 @@ const menuVariant = {
 };
 
 const Navbar: FC = () => {
-  const pathname = usePathname(); // Use usePathname to get the current route
+  const pathname = usePathname();
   const [activePath, setActivePath] = useState<string>("");
   const [isOpen, setIsOpen] = useState(false);
   const [isBlurred, setIsBlurred] = useState(false);
 
-  // Update active link based on the current route
   useEffect(() => {
     setActivePath(pathname);
   }, [pathname]);
 
-  // Handle scroll event
   useEffect(() => {
     const handleScroll = () => setIsBlurred(window.scrollY > 5);
     window.addEventListener("scroll", handleScroll);
@@ -62,7 +61,9 @@ const Navbar: FC = () => {
   return (
     <nav>
       <section
-        className={`fixed left-0 right-0 z-20 flex h-[95px] items-center justify-between bg-white px-5 shadow-md xl:top-[1rem] ${isBlurred ? "xl:mt-0" : "duration-300"} mx-auto max-w-[1240px] xl:rounded-full`}
+        className={`fixed left-0 right-0 z-20 flex h-[95px] items-center justify-between bg-white px-5 shadow-md xl:top-[1rem] ${
+          isBlurred ? "xl:mt-0" : "duration-300"
+        } mx-auto max-w-[1240px] xl:rounded-full`}
       >
         <Link href="/" onClick={handleNavbarClose}>
           <Image src={Logo} alt="Skicom Logo" height={50} />
@@ -74,7 +75,9 @@ const Navbar: FC = () => {
               <li key={path}>
                 <Link
                   href={path}
-                  className={`nav-item ${activePath === path ? "active text-[#007CC3]" : ""}`}
+                  className={`nav-item ${
+                    activePath === path ? "active text-[#007CC3]" : ""
+                  }`}
                   onClick={handleNavbarClose}
                 >
                   {label}
@@ -85,12 +88,8 @@ const Navbar: FC = () => {
         </section>
 
         <section className="hidden items-center gap-5 xl:flex">
-          <button
-            className="rounded-full border border-black p-1.5"
-            onClick={() => setIsOpen(true)}
-          >
-            <Search size={20} />
-          </button>
+          {/* Search Dialog Trigger */}
+          <SearchDialog />
 
           <Link href="/register" className="text-sm font-semibold">
             Sign Up
@@ -106,15 +105,18 @@ const Navbar: FC = () => {
           </CustomButton>
         </section>
 
-        <section className="xl:hidden">
+        <section className="flex items-center gap-2 xl:hidden">
+          {/* Search Dialog Trigger */}
+          <SearchDialog />
           <Hamburger toggled={isOpen} toggle={setIsOpen} size={24} />
         </section>
       </section>
 
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.section
-            className="navbar fixed z-20 mt-16 w-full shadow-md xl:hidden"
+            className="navbar fixed z-20 mt-20 w-full shadow-md xl:hidden"
             variants={menuVariant}
             initial="initial"
             animate="animate"
@@ -125,7 +127,9 @@ const Navbar: FC = () => {
                 <li key={path} onClick={handleNavbarClose}>
                   <Link
                     href={path}
-                    className={`nav-item ${activePath === path ? "active text-[#007CC3]" : ""}`}
+                    className={`nav-item ${
+                      activePath === path ? "active text-[#007CC3]" : ""
+                    }`}
                     onClick={() => setActivePath(path)}
                   >
                     {label}

@@ -15,7 +15,7 @@ export function DialogDemo({
 }: DialogDemoProperties) {
   return (
     <Dialog open={open} onOpenChange={onOpenChanged}>
-      <DialogContent className="sm:max-w-[425px]">{children}</DialogContent>
+      {children}
     </Dialog>
   );
 }
