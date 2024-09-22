@@ -46,7 +46,7 @@ const Paginations: React.FC<PaginationsProperties> = ({
               <PaginationLink
                 href="#"
                 size={"default"}
-                onClick={(e) => handlePageChange(index + 1, e)}
+                onClick={(event) => handlePageChange(index + 1, event)}
                 className={`${
                   currentPage === index + 1 ? "bg-primary text-white" : ""
                 }`}
