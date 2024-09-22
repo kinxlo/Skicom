@@ -7,9 +7,9 @@ interface IStarProperties {
 
 const Star = ({ filled }: IStarProperties) => {
   return filled ? (
-    <span className="text-neutral-dark-1 xl:text-2xl">★</span>
+    <span className="px-0.5 text-neutral-dark-1 xl:text-2xl">★</span>
   ) : (
-    <span className="xl:text-2x text-gray-400">☆</span>
+    <span className="px-0.5 text-gray-400 xl:text-2xl">☆</span>
   );
 };
 

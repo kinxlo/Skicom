@@ -21,133 +21,141 @@ import map from "../../../../public/images/services/map.png";
 const Page = () => {
   return (
     <main>
-      <div className="h-[350px] w-full bg-[url('/images/contact/hero.png')] bg-cover bg-no-repeat lg:h-[400px]">
-        <h3 className="pt-48 text-center text-3xl font-semibold text-white lg:text-5xl">
-          Contact Us
-        </h3>
+      <div className="flex h-[350px] w-full items-center justify-center bg-[url('/images/contact/hero.png')] bg-center bg-no-repeat lg:h-[510px] xl:bg-cover">
+        <div className="mt-[100px] lg:mt-0">
+          <h3 className="text-center text-[32px] font-semibold text-white lg:text-[56px]">
+            Contact Us
+          </h3>
 
-        <BreadCrumb />
+          <BreadCrumb />
+        </div>
       </div>
 
       <section className="bg-[#F6F6F6] pt-14">
-        <section className="mx-auto w-11/12 2xl:container">
-          <div className="flex flex-col justify-center">
-            <p className="text-center text-2xl font-bold text-neutral-dark-1 lg:text-4xl">
+        <Wrapper>
+          <div className="mx-auto max-w-[1000px] text-center">
+            <p className="my-2 text-[28px] font-semibold leading-[44px] text-neutral-dark-1 lg:text-[44px] xl:leading-[39px]">
               Feel Free To Reach Out
             </p>
 
-            <p className="mx-auto mt-2 max-w-2xl text-center text-xl">
+            <p className="mx-auto max-w-[792px] text-[17px] leading-[25px] xl:text-[20px] xl:leading-[30px]">
               Lorem ipsum dolor sit amet consectetur. Lorem libero arcu ut
               venenatis feugiat lacus. Elit tellus morbi quis a aliquam mi
               pretium nam donec. Duis posuere venenatis et amet sed.
             </p>
           </div>
 
-          <div>
-            <Wrapper className="mx-auto mt-10 gap-14 p-2 lg:flex lg:justify-center lg:bg-white lg:p-10">
-              {/* contact form */}
-              <div className="relative hidden h-[600px] w-full flex-col rounded-bl-xl rounded-tl-xl bg-neutral-dark-2 p-8 text-[#ffff] lg:flex">
-                <h4 className="font-semibold text-[#ffff]">
-                  Contact Information
-                </h4>
+          <section className="mx-auto mt-[53px] gap-[66px] rounded-[10px] px-0 py-[29px] lg:flex lg:justify-center lg:bg-white lg:px-[42px]">
+            {/* contact form */}
+            <div className="relative hidden h-[600px] w-full flex-col rounded-bl-xl rounded-tl-xl bg-neutral-dark-2 p-8 text-[#ffff] lg:flex">
+              <h4 className="text-[28px] font-semibold text-[#ffff]">
+                Contact Information
+              </h4>
 
-                <div className="mt-32 space-y-9">
-                  <div className="flex items-center gap-5">
-                    <PhoneCall size={18} />
-                    <a href="tel:+2348130054558" className="text-lg">
-                      +2348130054558
-                    </a>
-                  </div>
-
-                  <div className="flex items-center gap-5">
-                    <Mail size={18} />
-                    <a href="mailto:skicom001@gmail.com" className="text-lg">
-                      skicom001@gmail.com
-                    </a>
-                  </div>
-
-                  <div className="flex items-center gap-5">
-                    <MapPin size={18} />
-                    <p className="text-lg">Plot 1, Kwara Osun Street, Lagos.</p>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-7 flex flex-1 items-center gap-8">
-                  <div className="h-fit w-fit rounded-full border p-1.5">
-                    <a href="">
-                      <Twitter size={20} />
-                    </a>
-                  </div>
-
-                  <div className="h-fit w-fit rounded-full border p-1.5">
-                    <a href="">
-                      <Facebook size={20} />
-                    </a>
-                  </div>
-
-                  <div className="h-fit w-fit rounded-full border p-1.5">
-                    <a href="">
-                      <Instagram size={20} />
-                    </a>
-                  </div>
-                </div>
-
-                <div>
-                  <BlurImage
-                    src={big}
-                    alt=""
-                    className="absolute bottom-0 right-0"
-                  />
-                  <BlurImage
-                    src={small}
-                    alt=""
-                    className="absolute bottom-14 right-28"
-                  />
-                </div>
-              </div>
-
-              <div className="mt-6">
-                {/* form */}
-                <form className="w-full space-y-5">
-                  <Input
-                    type="text"
-                    className="h-11 bg-[#FFFFFF] placeholder:text-sm lg:w-[500px] lg:bg-transparent"
-                    placeholder="Full Name"
-                  />
-                  <Input
-                    type="email"
-                    className="h-11 bg-[#FFFFFF] placeholder:text-sm lg:w-[500px] lg:bg-transparent"
-                    placeholder="Email Address"
-                  />
-                  <Input
-                    type="text"
-                    className="h-11 bg-[#FFFFFF] placeholder:text-sm lg:w-[500px] lg:bg-transparent"
-                    placeholder="Subject"
-                  />
-
-                  <Textarea
-                    className="resize-non1 h-[280px] resize-none bg-[#FFFFFF] placeholder:text-sm lg:w-[500px] lg:bg-transparent"
-                    placeholder="Message"
-                  />
-                  <CustomButton
-                    variant="primary"
-                    className="mt-5 w-full rounded-full lg:h-[50px] lg:w-[300px]"
+              <div className="mt-32 space-y-9">
+                <div className="flex items-center gap-5">
+                  <PhoneCall size={18} />
+                  <a
+                    href="tel:+2348130054558"
+                    className="text-[17px] xl:text-[20px]"
                   >
-                    Send Message
-                  </CustomButton>
-                </form>
-                {/* form */}
+                    +2348130054558
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-5">
+                  <Mail size={18} />
+                  <a
+                    href="mailto:skicom001@gmail.com"
+                    className="text-[17px] xl:text-[20px]"
+                  >
+                    skicom001@gmail.com
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-5">
+                  <MapPin size={18} />
+                  <p className="text-[17px] xl:text-[20px]">
+                    Plot 1, Kwara Osun Street, Lagos.
+                  </p>
+                </div>
               </div>
-              {/* contact form */}
-            </Wrapper>
-          </div>
-        </section>
+
+              <div className="absolute bottom-7 flex flex-1 items-center gap-8">
+                <div className="h-fit w-fit rounded-full border p-1.5">
+                  <a href="">
+                    <Twitter size={20} />
+                  </a>
+                </div>
+
+                <div className="h-fit w-fit rounded-full border p-1.5">
+                  <a href="">
+                    <Facebook size={20} />
+                  </a>
+                </div>
+
+                <div className="h-fit w-fit rounded-full border p-1.5">
+                  <a href="">
+                    <Instagram size={20} />
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <BlurImage
+                  src={big}
+                  alt=""
+                  className="absolute bottom-0 right-0"
+                />
+                <BlurImage
+                  src={small}
+                  alt=""
+                  className="absolute bottom-14 right-28"
+                />
+              </div>
+            </div>
+
+            <div className="mt-6">
+              {/* form */}
+              <form className="w-full space-y-[23px]">
+                <Input
+                  type="text"
+                  className="h-11 bg-[#FFFFFF] placeholder:text-sm lg:w-[500px] lg:bg-transparent"
+                  placeholder="Full Name"
+                />
+                <Input
+                  type="email"
+                  className="h-11 bg-[#FFFFFF] placeholder:text-sm lg:w-[500px] lg:bg-transparent"
+                  placeholder="Email Address"
+                />
+                <Input
+                  type="text"
+                  className="h-11 bg-[#FFFFFF] placeholder:text-sm lg:w-[500px] lg:bg-transparent"
+                  placeholder="Subject"
+                />
+
+                <Textarea
+                  className="resize-non1 h-[280px] resize-none bg-[#FFFFFF] placeholder:text-sm lg:w-[500px] lg:bg-transparent"
+                  placeholder="Message"
+                />
+                <CustomButton
+                  variant="primary"
+                  className="mt-5 w-full rounded-full lg:h-[50px] lg:w-[300px]"
+                >
+                  Send Message
+                </CustomButton>
+              </form>
+              {/* form */}
+            </div>
+            {/* contact form */}
+          </section>
+        </Wrapper>
         <div className="mt-5 lg:mt-20">
           {/* map */}
           <BlurImage
             src={map}
             alt="map"
-            className="mx-auto h-52 w-full max-w-full object-cover lg:h-[400px]"
+            className="mx-auto h-52 w-full max-w-full object-cover lg:h-[318px]"
           />
           {/* map */}
         </div>

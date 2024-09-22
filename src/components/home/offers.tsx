@@ -99,17 +99,20 @@ const Offers = () => {
       <Wrapper>
         <section>
           <div className="mb-[51px] flex flex-col items-center justify-between md:flex-row">
-            <div>
-              <p className="mb-1 text-[20px] text-gray-300 lg:text-[24px]">
+            <div className="text-center xl:text-left">
+              <p className="mb-1 text-[17px] text-gray-300 lg:text-[24px]">
                 Best Of SKICOM
               </p>
-              <h3 className="mb-3 text-[26px] text-white lg:text-[44px]">
+              <h3 className="mb-3 text-[28px] text-white lg:text-[44px]">
                 Promotions And Offers
               </h3>
             </div>
 
             <div>
-              <CustomButton className="h-[44px] w-[180px] rounded-full text-primary">
+              <CustomButton
+                href={`/services`}
+                className="h-[44px] w-[180px] rounded-full text-primary"
+              >
                 View All Plans
               </CustomButton>
             </div>

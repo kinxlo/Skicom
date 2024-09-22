@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Dialog, DialogContent } from "~/components/ui/dialog";
+import { Dialog } from "~/components/ui/dialog";
 
 interface DialogDemoProperties {
   open: boolean;
@@ -15,7 +15,7 @@ export function DialogDemo({
 }: DialogDemoProperties) {
   return (
     <Dialog open={open} onOpenChange={onOpenChanged}>
-      <DialogContent className="sm:max-w-[425px]">{children}</DialogContent>
+      {children}
     </Dialog>
   );
 }

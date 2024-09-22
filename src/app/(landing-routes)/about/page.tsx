@@ -9,22 +9,23 @@ import aboutHero from "../../../../public/images/about/about-hero.png";
 import aboutRight from "../../../../public/images/about/about-right.png";
 import connection from "../../../../public/images/about/connection.png";
 import vision from "../../../../public/images/about/vision.png";
-import wifiBold from "../../../../public/images/home/wifi-bold.png";
 
 const Page = () => {
   return (
     <main className="overflow-hidden">
-      <div className="h-[350px] w-full bg-[url('/images/about/hero.png')] bg-cover bg-no-repeat lg:h-[400px]">
-        <h3 className="pt-48 text-center text-3xl font-semibold text-white lg:pt-44 lg:text-5xl">
-          About Us
-        </h3>
+      <div className="flex h-[350px] w-full items-center justify-center bg-[url('/images/about/hero.png')] bg-center bg-no-repeat lg:h-[510px] xl:bg-cover">
+        <div className="mt-[100px] lg:mt-0">
+          <h3 className="text-center text-[32px] font-semibold text-white lg:text-[56px]">
+            About Us
+          </h3>
 
-        <BreadCrumb />
+          <BreadCrumb />
+        </div>
       </div>
 
       <section className="relative bg-[#F6F6F6]">
         <Wrapper>
-          <div className="items-center justify-between py-7 lg:flex lg:py-14">
+          <div className="items-center justify-between gap-[66px] py-7 lg:flex lg:py-14">
             <BlurImage
               src={aboutHero}
               alt="about-hero-img"
@@ -32,54 +33,58 @@ const Page = () => {
             />
 
             <div className="mt-7 lg:mt-0">
-              <h3 className="text-2xl font-semibold text-neutral-dark-2">
+              <h3 className="text-[17px] font-semibold text-neutral-dark-2 xl:text-[27px]">
                 About SKICOM
               </h3>
-              <p className="relative my-2 max-w-lg text-[28px] font-semibold leading-[50px] text-neutral-dark-1 lg:text-4xl">
-                New Leading Telecoms Provider{" "}
-                <span className="absolute mb-10 ms-3 rounded-full border border-neutral-dark-2 px-10 py-2.5 text-sm text-neutral-dark-2">
+              <p className="relative my-2 text-[28px] font-semibold leading-[52px] text-neutral-dark-1 lg:text-[44px] xl:leading-[62px]">
+                New Leading Telecoms Provider
+                <span className="absolute ms-3 rounded-full border border-neutral-dark-2 px-10 py-2.5 text-sm text-neutral-dark-2 xl:mt-3">
                   Established 2020.
                 </span>
               </p>
-              <p className="max-w-xl text-lg font-medium">
+              <p className="text-[17px] leading-[25px] xl:text-[20px] xl:leading-[30px]">
                 Lorem ipsum dolor sit amet consectetur. Lorem libero arcu ut
                 venenatis feugiat lacus. Elit tellus morbi quis a aliquam mi
                 pretium nam donec. Duis posuere venenatis et amet sed.{" "}
               </p>
 
-              <div className="mt-8 flex gap-2">
+              <div className="mt-[24px] flex gap-2">
                 <BlurImage
-                  src={wifiBold}
-                  alt="about-hero-img"
-                  className="h-[72px] w-[75px]"
+                  width={90}
+                  height={88}
+                  src="/images/home/wifi-bold.png"
+                  alt="offer-img"
+                  className="h-[90px] w-24 rounded-lg"
                 />
 
                 <div>
-                  <h4 className="mb-1 text-xl font-medium text-neutral-dark-2">
+                  <h5 className="text-[20px] font-medium text-neutral-dark-2 xl:text-[22px]">
                     Swift Network
-                  </h4>
-                  <p className="max-w-[350px] text-sm">
-                    Lorem ipsum dolor sit amet ctetur. Lorem libero arcu ut
-                    ventis feugiat lacus.{" "}
+                  </h5>
+                  <p className="mt-2 max-w-[270px] text-[17px]">
+                    Lorem ipsum dolor sit amet ctetur. Lorem libero arcu ut.
                   </p>
                 </div>
               </div>
 
-              <div className="mt-3 flex gap-2">
-                <BlurImage
-                  src={connection}
-                  alt="about-hero-img"
-                  className="h-[72px] w-[75px]"
-                />
+              <div className="mt-[24px] flex gap-2">
+                <div className="flex gap-2">
+                  <BlurImage
+                    width={90}
+                    height={88}
+                    src={connection}
+                    alt="offer-img"
+                    className="h-[90px] w-24 rounded-lg"
+                  />
 
-                <div>
-                  <h4 className="mb-1 text-xl font-medium text-neutral-dark-2">
-                    Fast Connection
-                  </h4>
-                  <p className="max-w-[350px] text-sm">
-                    Lorem ipsum dolor sit amet ctetur. Lorem libero arcu ut
-                    ventis feugiat lacus.{" "}
-                  </p>
+                  <div>
+                    <h5 className="text-[20px] font-medium text-neutral-dark-2 xl:text-[22px]">
+                      Fast Connection
+                    </h5>
+                    <p className="mt-2 max-w-[270px] text-[17px]">
+                      Lorem ipsum dolor sit amet ctetur. Lorem libero arcu ut.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -92,35 +97,36 @@ const Page = () => {
         />
       </section>
 
-      <section className="relative hidden bg-white lg:block">
+      <section className="relative bg-white">
         <Wrapper>
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="text-lg font-semibold text-neutral-dark-2">
+          <div className="flex flex-col-reverse items-center justify-between gap-[76px] lg:flex-row">
+            <div className="my-[32px] flex-1 xl:my-0">
+              <h3 className="text-[17px] text-neutral-dark-2 xl:text-[27px]">
                 Our Mission & Vision
               </h3>
-              <p className="my-2 max-w-[400px] text-4xl font-semibold text-neutral-dark-1">
+              <p className="my-2 text-[28px] text-neutral-dark-1 xl:text-[44px]">
                 Transforming Connectivity, Inspiring the Future
               </p>
-              <p className="max-w-lg font-medium">
+              <p className="mb-[20px] text-[17px] leading-[30px] xl:text-[20px]">
                 At Skicom, our mission is to revolutionize network services and
                 connectivity through innovative, reliable, and accessible
                 solutions. We strive to enhance your digital journey with
                 cutting-edge technology and exceptional service.
               </p>
-              <p className="mt-3 max-w-lg font-medium">
+              <p className="text-[17px] leading-[30px] xl:text-[20px]">
                 Our vision is to lead the future of digital connectivity by
                 setting new standards in network services and data access. We
                 aim to create a world where everyone is seamlessly connected,
                 empowered by limitless possibilities and innovative solutions.
               </p>
             </div>
-            <div>
-              {" "}
+            <div className="mt-[35px] flex-1 xl:mt-0">
               <BlurImage
+                width={323}
+                height={453}
                 src={vision}
                 alt="about-hero-img"
-                className="z-10 h-[850px] w-[600px] object-cover"
+                className="w-full"
               />
             </div>
           </div>
@@ -132,45 +138,6 @@ const Page = () => {
         />
       </section>
 
-      {/* sm version */}
-
-      <section className="relative bg-white py-10 lg:hidden">
-        <div className="mx-auto flex w-11/12 flex-col items-center justify-between 2xl:container">
-          <div>
-            {" "}
-            <BlurImage
-              src={vision}
-              alt="about-hero-img"
-              className="z-10 h-[453px]"
-            />
-          </div>
-          <div className="mt-8">
-            <h3 className="text-lg font-semibold text-neutral-dark-2">
-              Our Mission & Vision
-            </h3>
-            <p className="my-2 max-w-[300px] text-3xl font-semibold text-neutral-dark-1">
-              Transforming Connectivity, Inspiring the Future
-            </p>
-            <p className="max-w-sm font-medium">
-              At Skicom, our mission is to revolutionize network services and
-              connectivity through innovative, reliable, and accessible
-              solutions. We strive to enhance your digital journey with
-              cutting-edge technology and exceptional service.
-            </p>
-            <p className="mt-3 max-w-sm font-medium">
-              Our vision is to lead the future of digital connectivity by
-              setting new standards in network services and data access. We aim
-              to create a world where everyone is seamlessly connected,
-              empowered by limitless possibilities and innovative solutions.
-            </p>
-          </div>
-        </div>
-        <BlurImage
-          src={aboutRight}
-          alt="about-hero-img"
-          className="absolute bottom-0 right-0 z-0 hidden h-[450px] w-[400px] object-cover lg:block"
-        />
-      </section>
       {/* sm version */}
       <section>
         {/* job opening */}

@@ -95,14 +95,16 @@ const offers = [
 
 const JobOffers = () => {
   return (
-    <main className="relative bg-primary py-7 lg:py-10">
+    <section className="relative bg-primary py-7 lg:py-10">
       <Wrapper>
         <section className="">
-          <div className="items-center lg:mr-10 lg:flex lg:justify-between">
-            <div className="text-center">
-              <p className="mb-1 text-2xl text-gray-300">Join Our Team</p>
-              <h3 className="mb-3 text-4xl text-white">Current Job Openings</h3>
-            </div>
+          <div className="text-center">
+            <p className="mb-1 text-[17px] text-gray-300 xl:text-[27px]">
+              Join Our Team
+            </p>
+            <h3 className="mb-3 text-[28px] text-white xl:text-[44px]">
+              Current Job Openings
+            </h3>
           </div>
 
           <div className="my-7 hidden items-center justify-between gap-5 lg:flex">
@@ -137,7 +139,7 @@ const JobOffers = () => {
           />
         </div>
       </section>
-    </main>
+    </section>
   );
 };
 

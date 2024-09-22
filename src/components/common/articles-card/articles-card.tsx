@@ -25,16 +25,16 @@ const ArticlesCard = ({
       />
 
       <div className="my-5 flex items-center justify-between">
-        <h1 className="whitespace-nowrap text-sm font-bold text-[#090914] lg:text-2xl">
+        <h1 className="whitespace-nowrap text-[14px] font-bold text-[#090914] xl:text-[24px]">
           {heading}
         </h1>
 
-        <span className="whitespace-nowrap text-xs text-gray-600 lg:text-lg xl:mr-14 2xl:mr-7">
+        <span className="whitespace-nowrap text-[12px] text-gray-600 xl:mr-14 xl:text-[20px] 2xl:mr-7">
           {dateSent}
         </span>
       </div>
 
-      <p className="max-w-[550px] text-sm text-gray-600 lg:text-xl">
+      <p className="max-w-[550px] text-[12px] text-gray-600 xl:text-[20px]">
         {subHeading}
       </p>
     </main>

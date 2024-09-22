@@ -1,5 +1,4 @@
 import JobCard from "../job-card/job-card";
-import { Card } from "../ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 
 interface cardProperties {
@@ -19,24 +18,22 @@ interface MobileOffersProperties {
 
 const MobileJobOpening = ({ offers }: MobileOffersProperties) => {
   return (
-    <main>
+    <section>
       <Carousel className="z-10 w-full">
         <CarouselContent>
           {offers.map((item, index) => (
             <CarouselItem key={index} className="basis-1/1">
-              <Card className="">
-                <JobCard
-                  position={item.position}
-                  contract={item.location}
-                  opening={item.opening}
-                  jobDescription={item.description}
-                />
-              </Card>
+              <JobCard
+                position={item.position}
+                contract={item.location}
+                opening={item.opening}
+                jobDescription={item.description}
+              />
             </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>
-    </main>
+    </section>
   );
 };
 
