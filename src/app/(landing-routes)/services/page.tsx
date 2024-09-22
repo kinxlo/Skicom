@@ -1,3 +1,5 @@
+// components/Blob.js
+
 import Testimonial from "~/components/common/testimonial/testimonial";
 import { BreadCrumb } from "~/components/layout/bread-crumb/bread-crumb";
 import { Wrapper } from "~/components/layout/wrapper";
@@ -12,8 +14,8 @@ import speed from "../../../../public/images/services/speed.png";
 const Page = () => {
   return (
     <main>
-      <div className="mx-auto h-[350px] w-full bg-[url('/images/services/hero.png')] bg-cover bg-no-repeat lg:h-[400px]">
-        <h3 className="pt-48 text-center text-3xl font-semibold text-white lg:pt-44 lg:text-5xl">
+      <div className="h-[350px] w-full bg-[url('/images/about/hero.png')] bg-cover bg-no-repeat pt-48 lg:h-[400px]">
+        <h3 className="text-center text-[32px] font-semibold text-white lg:text-[56px]">
           Services
         </h3>
 
@@ -23,60 +25,60 @@ const Page = () => {
       <section className="relative bg-[#FFFFFF]">
         <Wrapper>
           <div className="mx-auto py-10 lg:mt-[30px]">
-            <div className="space-y-2 text-center">
-              <h3 className="text-2xl font-semibold text-neutral-dark-2">
+            <div className="mx-auto max-w-[1000px] text-center">
+              <h3 className="text-[17px] font-semibold text-neutral-dark-2 xl:text-[27px]">
                 Our Services
               </h3>
-              <p className="text-[28px] text-[44px] font-bold text-neutral-dark-1">
+              <p className="my-2 text-[28px] font-semibold leading-[44px] text-neutral-dark-1 lg:text-[44px] xl:leading-[39px]">
                 Experience Superior Network Services
               </p>
-              <p className="mx-auto max-w-2xl text-xl">
+              <p className="mx-auto max-w-[792px] text-[17px] leading-[25px] xl:text-[20px] xl:leading-[30px]">
                 Lorem ipsum dolor sit amet consectetur. Lorem libero arcu ut
                 venenatis feugiat lacus. Elit tellus morbi quis a aliquam.
               </p>
             </div>
 
             <section className="mt-8 items-center justify-between space-y-10 lg:flex lg:space-y-0">
-              <div className="text-center">
+              <div className="relative text-center">
                 <BlurImage
                   src={speed}
                   alt="speed-services-img"
-                  className="mx-auto mb-4 h-48 w-48"
+                  className="animate-sway relative mx-auto mb-4 h-48 w-48 rounded-full"
                 />
-                <h4 className="mb-1 font-semibold text-neutral-dark-1">
-                  speed
+                <h4 className="mb-1 text-[24px] text-neutral-dark-1 xl:text-[28px]">
+                  Speed
                 </h4>
-                <p className="mx-auto max-w-[340px] text-lg">
+                <p className="mx-auto max-w-[340px] text-[17px] xl:text-[20px]">
                   Our network offers high-speed internet with various options to
                   meet your needs.
                 </p>
               </div>
 
-              <div className="text-center">
+              <div className="relative text-center">
                 <BlurImage
                   src={coverage}
                   alt="coverage-services-img"
-                  className="mx-auto mb-4 h-48 w-48"
+                  className="animate-sway relative mx-auto mb-4 h-48 w-48 rounded-full"
                 />
-                <h4 className="mb-1 font-semibold text-neutral-dark-1">
+                <h4 className="mb-1 text-[24px] text-neutral-dark-1 xl:text-[28px]">
                   Coverage
                 </h4>
-                <p className="mx-auto max-w-[340px] text-lg">
+                <p className="mx-auto max-w-[340px] text-[17px] xl:text-[20px]">
                   We provide extensive coverage across the country, ensuring you
                   stay connected wherever you go.
                 </p>
               </div>
 
-              <div className="text-center">
+              <div className="relative text-center">
                 <BlurImage
                   src={reliability}
                   alt="reliability-services-img"
-                  className="mx-auto mb-4 h-48 w-48"
+                  className="animate-sway relative mx-auto mb-4 h-48 w-48 rounded-full"
                 />
-                <h4 className="mb-1 font-semibold text-neutral-dark-1">
+                <h4 className="mb-1 text-[24px] text-neutral-dark-1 xl:text-[28px]">
                   Reliability
                 </h4>
-                <p className="mx-auto max-w-[340px] text-lg">
+                <p className="mx-auto max-w-[340px] text-[17px] xl:text-[20px]">
                   Our network is built with the latest technology to offer a
                   stable and reliable connection at all times.
                 </p>

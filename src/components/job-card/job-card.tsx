@@ -22,14 +22,16 @@ const JobCard = ({
   opening,
 }: jobProperties) => {
   return (
-    <main className="my-3 h-[460px] w-[400px] rounded-xl bg-default p-5">
-      <h3 className="text-2xl font-medium text-neutral-dark-1">{position}</h3>
+    <main className="my-3 min-h-[460px] max-w-[263px] rounded-[27px] bg-default p-[18px] lg:max-w-[400px] lg:p-[28px]">
+      <h3 className="text-[19px] font-medium text-neutral-dark-1 xl:text-[30px]">
+        {position}
+      </h3>
 
-      <p className="text-destructive">
+      <p className="text-[13px] text-destructive xl:text-[20px]">
         {contract}, {opening}
       </p>
 
-      <p className="mt-4 text-[16px] font-semibold text-neutral-dark-2">
+      <p className="mt-4 text-[13px] font-semibold text-neutral-dark-2 xl:text-[20px]">
         Description
       </p>
 
@@ -38,9 +40,15 @@ const JobCard = ({
       <ul className="mt-5 space-y-4">
         {jobDescription.map((item) => (
           <li key={item.id}>
-            <div className="flex gap-2">
-              <Image src={check} className="h-6 w-6" alt={""} />
-              <p className="text-[16px] text-gray-500">{item.descriptions}</p>
+            <div className="flex gap-2 lg:pr-[25px]">
+              <Image
+                src={check}
+                className="w-[15px h-[15px] xl:h-[24px] xl:w-[24px]"
+                alt={"check"}
+              />
+              <p className="text-[12px] text-gray-500 xl:text-[16px]">
+                {item.descriptions}
+              </p>
             </div>
           </li>
         ))}

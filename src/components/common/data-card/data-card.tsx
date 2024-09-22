@@ -22,10 +22,12 @@ const DataCard = ({ price, initialPrice, plan, packages }: cardProperties) => {
 
   return (
     <div
-      className={`card relative rounded-[1rem] bg-[url('/images/home/card-clip-bg.png')] bg-no-repeat ${pathName === "/services" ? "w-[300px]" : "w-[289px] xl:w-[400px]"} p-[20px] xl:p-[43px]`}
+      className={`card relative rounded-[1rem] bg-[url('/images/home/card-clip-bg.png')] bg-no-repeat ${pathName === "/services" ? "w-[293px] p-[20px] xl:p-[19px]" : "w-[289px] p-[20px] xl:w-[400px] xl:p-[43px]"}`}
     >
       <div className="mt-3 flex items-center gap-4">
-        <p className="text-[50px] font-semibold text-neutral-dark-1 xl:text-6xl">
+        <p
+          className={`text-[36px] font-semibold text-neutral-dark-1 xl:text-[50px] ${pathName === "/services" ? "" : ""}`}
+        >
           #{price}
         </p>
         <p className="text-[24px] font-medium text-red-600 line-through xl:text-3xl">
@@ -34,13 +36,13 @@ const DataCard = ({ price, initialPrice, plan, packages }: cardProperties) => {
         </p>
       </div>
 
-      <p className="my-3 mt-8 text-[28px] font-bold text-neutral-dark-2 xl:text-[36px]">
+      <p className="my-3 mt-8 text-[19px] font-bold text-neutral-dark-2 xl:text-[27px]">
         {plan}
       </p>
 
       <div className="mt-5 h-[0.5px] w-full bg-gray-300"></div>
 
-      <ul className="mt-5 space-y-2.5">
+      <ul className="mt-5">
         {packages.map((item) => (
           <li key={item.id}>
             <div className="mt-[12px] flex items-center gap-2">
@@ -53,7 +55,9 @@ const DataCard = ({ price, initialPrice, plan, packages }: cardProperties) => {
         ))}
       </ul>
 
-      <button className="absolute bottom-[43px] right-[43px] rounded-full bg-[#EFEFEF] p-2">
+      <button
+        className={`absolute rounded-full bg-[#EFEFEF] p-2 ${pathName === "/services" ? "bottom-[19px] right-[19px]" : "bottom-[20px] right-[20px] xl:bottom-[43px] xl:right-[43px]"}`}
+      >
         <ChevronRight size={33} />
       </button>
     </div>

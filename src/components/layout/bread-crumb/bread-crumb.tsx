@@ -1,7 +1,6 @@
 "use client";
 
 import { House } from "lucide-react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import {
@@ -19,10 +18,14 @@ export const BreadCrumb = () => {
   return (
     <main className="mt-2 flex justify-center">
       <Breadcrumb>
-        <BreadcrumbList>
+        <BreadcrumbList className="xl:text-[20px]">
           <BreadcrumbItem>
-            <BreadcrumbLink className="flex items-center gap-1 text-white">
-              <House size={10} /> <Link href="/">Home</Link>
+            <BreadcrumbLink
+              href={`/`}
+              className="flex items-center gap-1 text-white"
+            >
+              <House size={16} />
+              <span>Home</span>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator className="text-white" />

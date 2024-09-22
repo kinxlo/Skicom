@@ -4,20 +4,22 @@ import BlurImage from "../miscellaneous/blur-image";
 
 const Teams = () => {
   return (
-    <main className="mx-auto mt-3 w-11/12 2xl:container">
+    <section className="mx-auto mt-3">
       <div className="pt-14 text-center">
-        <h4 className="mb-2 text-3xl text-primary">Meet Our Team</h4>
-        <p className="mx-auto max-w-lg text-[#292929]">
+        <h4 className="mb-2 text-[28px] text-primary xl:text-[44px]">
+          Meet Our Team
+        </h4>
+        <p className="mx-auto max-w-lg text-[14px] leading-[23px] text-[#292929] xl:text-[16px]">
           Lorem ipsum dolor sit amet consectetur. Lorem libero arcu ut venenatis
           feugiat lacus. Elit tellus morbi quis a aliquam mi pretium nam donec.
-          Duis posuere venenatis et amet sed.{" "}
+          Duis posuere venenatis et amet sed.
         </p>
 
-        <div className="relative">
+        <div className="relative mt-[56px]">
           <BlurImage
             src={teams}
             alt="teams-img"
-            className="mt-20 h-[140px] object-cover lg:h-[260px]"
+            className="mt-20 h-fit w-full object-cover"
           />
           <BlurImage
             src={role}
@@ -26,7 +28,7 @@ const Teams = () => {
           />
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 
