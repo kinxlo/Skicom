@@ -1,4 +1,4 @@
-# skycom_boilerplate_nextjs
+# Skicom_boilerplate_nextjs
 
 ## Overview
 
@@ -14,8 +14,8 @@ In order to run this app locally, you should have the following programs install
 #### Clone this repository
 
 ```
-git clone git@github.com/skycomprojects/skycom_boilerplate_nextjs.git
-cd skycom_boilerplate_nextjs
+git clone git@github.com/Skicomprojects/Skicom_boilerplate_nextjs.git
+cd Skicom_boilerplate_nextjs
 ```
 
 #### Install dependencies
