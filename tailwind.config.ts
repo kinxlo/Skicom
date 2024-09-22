@@ -123,10 +123,29 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        sway: {
+          // "0%": {
+          //   transform: "translateY(0) rotate(0deg) scale(1) skewX(0deg)",
+          // },
+          // "25%": {
+          //   transform: "translateY(-5px) rotate(-1deg) scale(1.02) skewX(1deg)",
+          // },
+          // "50%": {
+          //   transform: "translateY(5px) rotate(1deg) scale(0.98) skewX(-1deg)",
+          // },
+          // "75%": {
+          //   transform:
+          //     "translateY(-3px) rotate(-0.5deg) scale(1.01) skewX(0.5deg)",
+          // },
+          // "100%": {
+          //   transform: "translateY(0) rotate(0deg) scale(1) skewX(0deg)",
+          // },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        // sway: "sway 4s infinite ease-in-out",
       },
     },
   },

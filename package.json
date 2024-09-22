@@ -7,8 +7,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
     "shad:add": "npx shadcn-ui@latest add",
     "test": "vitest",
     "test:ui": "vitest --ui",
@@ -16,16 +14,21 @@
     "test:ci": "vitest --coverage",
     "email:dev": "email dev --dir \"./src/email/templates\"",
     "email:build": "email build --dir \"./src/email/templates\"",
-    "email:start": "email start"
+    "email:start": "email start",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix",
+    "prepare": "husky",
+    "prettier": "prettier --write \"src/**/*.{ts,tsx,js,jsx,mdx}\""
   },
   "dependencies": {
+    "@ducanh2912/next-pwa": "^10.2.8",
     "@hookform/resolvers": "^3.9.0",
+    "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-popover": "^1.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-switch": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.1",
-    "@radix-ui/react-slot": "^1.1.0",
-    "@radix-ui/react-dialog": "^1.1.1",
     "@react-email/components": "0.0.21",
     "@react-email/tailwind": "^0.0.18",
     "@t3-oss/env-nextjs": "^0.10.1",
@@ -33,7 +36,9 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cookies-next": "^4.2.1",
+    "embla-carousel-react": "^8.1.8",
     "framer-motion": "^11.3.8",
+    "hamburger-react": "^2.5.1",
     "input-otp": "^1.2.4",
     "jest-axe": "^9.0.0",
     "jose": "^5.6.3",
@@ -83,12 +88,19 @@
     "eslint-plugin-unicorn": "^54.0.0",
     "eslint-plugin-unused-imports": "^3.2.0",
     "eslint-plugin-vitest": "^0.4.1",
+    "husky": "^9.1.5",
     "jsdom": "^24.1.0",
+    "lint-staged": "13.2.3",
     "postcss": "^8",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.5.4",
     "vitest": "^1.6.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier -w"
+    ]
   }
 }

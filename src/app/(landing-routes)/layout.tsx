@@ -1,4 +1,5 @@
-import GotoTop from "~/components/miscellaneous/goto-top";
+import Footer from "~/components/layout/footer/footer";
+import Navbar from "~/components/layout/navbar/navbar";
 
 export default function LandingLayout({
   children,
@@ -6,11 +7,10 @@ export default function LandingLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex min-h-screen w-full flex-col justify-between">
-      {/* NAV-BAR */}
-      <div className="flex-1">{children}</div>
-      {/* FOOTER */}
-      <GotoTop />
-    </div>
+    <section>
+      <Navbar />
+      <div>{children}</div>
+      <Footer />
+    </section>
   );
 }

@@ -1,0 +1,40 @@
+.help {
+  background-image: url(../../../public/images/home/help.png);
+  height: 50px;
+  width: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.rate {
+  background-image: url(../../../public/images/home/rate.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.support {
+  background-image: url(../../../public/images/home/support.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.payment {
+  background-image: url(../../../public/images/home/payment.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* In your CSS file (e.g., home.css) */
+.bg-offers {
+  background-image: url("/images/home/offer-ring-up.png"),
+    url("/images/home/offer-ring-down.png");
+  background-position:
+    top right,
+    bottom left;
+  background-repeat: no-repeat, no-repeat;
+}

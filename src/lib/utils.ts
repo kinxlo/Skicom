@@ -106,3 +106,32 @@ export const handleMouseEnter = (event: MouseEvent) => {
   cancelAnimationFrame(animationFrameId!);
   animationFrameId = requestAnimationFrame(animate);
 };
+
+// export function getOS(): string {
+//   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//   const uA = navigator.userAgent || navigator.vendor || (window as any).opera;
+
+//   // Check for iOS devices
+//   if (
+//     // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//     (/iPad|iPhone|iPod/.test(uA) && !(window as any).MSStream) ||
+//     (uA.includes("Mac") && "ontouchend" in document)
+//   ) {
+//     return "iOS";
+//   }
+
+//   // List of OS to check against
+//   const operatingSystems = [
+//     "Windows",
+//     "Android",
+//     "Unix",
+//     "Mac",
+//     "Linux",
+//     "BlackBerry",
+//   ];
+
+//   // Find the matching OS or return 'Unknown' if not found
+//   return (
+//     operatingSystems.find((os) => new RegExp(os, "i").test(uA)) || "Unknown"
+//   );
+// }

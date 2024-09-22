@@ -15,25 +15,25 @@ const Particles404 = () => {
     }, 500);
   }, [winWidth]);
   return (
-    <div className="absolute left-0 top-0 mx-auto h-full w-full max-w-[1440px] overflow-hidden">
+    <div className="h-full w-full overflow-hidden">
       <canvas
         ref={canvaReference}
         id="particles_404"
         className="absolute left-0 top-0 h-[100dvh] w-full"
       />
-      <header className="absolute left-0 top-0 w-full bg-white px-10 py-8 font-medium uppercase text-[#f97415] md:text-3xl">
+      <header className="absolute left-0 top-0 w-full bg-white px-10 py-8 font-medium uppercase text-primary md:text-3xl">
         <h1
           className=""
           // @ts-expect-error Hacking the type
           onMouseEnter={handleMouseEnter}
-          data-value="HNG-BOILERPLATE"
+          data-value="SKICOM INC."
         >
-          Hng-boilerplate
+          SkiCom Inc.
         </h1>
       </header>
       <div className="absolute bottom-10 left-10 font-sans text-2xl uppercase">
         <p
-          className="font-bold text-[#f97415] md:text-6xl lg:text-9xl xl:text-[10rem]"
+          className="font-bold text-primary md:text-6xl lg:text-9xl xl:text-[10rem]"
           // @ts-expect-error Hacking the type
           onMouseEnter={handleMouseEnter}
           data-value="404!!"
